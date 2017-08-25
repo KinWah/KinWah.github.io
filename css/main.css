@@ -4,6 +4,9 @@ html {
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
+.header {
+    background-image: url(https://ws1.sinaimg.cn/large/694830ebgy1fh3pyd05klj21kw0f2dy2.jpg);
+}
 body {
   margin: 0;
 }
@@ -1808,7 +1811,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #661d45;
+  background: #c96b6f;
 }
 .links-of-blogroll {
   font-size: 13px;

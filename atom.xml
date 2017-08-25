@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://KinWah.top/"/>
-  <updated>2017-08-25T14:07:15.000Z</updated>
+  <updated>2017-08-25T17:31:42.000Z</updated>
   <id>http://KinWah.top/</id>
   
   <author>
@@ -16,11 +16,275 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
+    <title>Html&amp;Css&amp;JavaScript</title>
+    <link href="http://KinWah.top//blog/Html&amp;Css&amp;JavaScript.html"/>
+    <id>http://KinWah.top//blog/Html&amp;Css&amp;JavaScript.html</id>
+    <published>2017-08-25T17:24:43.000Z</published>
+    <updated>2017-08-25T17:31:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<!--
+default 灰色
+primary 深蓝
+success 绿色
+info 浅蓝
+warning 橙色
+danger 红色
+-->
+<div class="note warning"><p>前端三大基础，万变不离其宗，举一反三，无所畏惧。<br>Html &amp; Css &amp; JavaScript ！</p></div>
+<a id="more"></a>
+<p>##使用规则</p>
+<p>###1、标题<br><code>#1</code></p>
+<p><code>##2</code></p>
+<p><code>###3</code></p>
+<p><code>####4</code></p>
+<p><code>………一次类推………</code></p>
+<p>###2、图床&amp;链接<br>插入链接</p>
+<p><a href="https://www.baidu.com" target="_blank" rel="external">baidu</a></p>
+<p>插入图片<br><img src="http://wx4.sinaimg.cn/mw1024/6ae20627gy1fiwh3we4zaj216w16wh08.jpg" alt="key"></p>
+<p>###3、待续</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;!--
+default 灰色
+primary 深蓝
+success 绿色
+info 浅蓝
+warning 橙色
+danger 红色
+--&gt;
+&lt;div class=&quot;note warning&quot;&gt;&lt;p&gt;前端三大基础，万变不离其宗，举一反三，无所畏惧。&lt;br&gt;Html &amp;amp; Css &amp;amp; JavaScript ！&lt;/p&gt;&lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://KinWah.top/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="JavaScript" scheme="http://KinWah.top/tags/JavaScript/"/>
+    
+      <category term="Html" scheme="http://KinWah.top/tags/Html/"/>
+    
+      <category term="Css" scheme="http://KinWah.top/tags/Css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo+Github建站</title>
+    <link href="http://KinWah.top//blog/Hexo+Github%E5%BB%BA%E7%AB%99.html"/>
+    <id>http://KinWah.top//blog/Hexo+Github建站.html</id>
+    <published>2017-08-25T17:14:32.000Z</published>
+    <updated>2017-08-25T17:30:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<!--
+default 灰色
+primary 深蓝
+success 绿色
+info 浅蓝
+warning 橙色
+danger 红色
+-->
+<div class="note primary"><p>用 Hexo+Github 简单建立自己的个人博客，并对其进行后期优化</p></div>
+<a id="more"></a>
+<p>##使用规则</p>
+<p>###1、标题<br><code>#1</code></p>
+<p><code>##2</code></p>
+<p><code>###3</code></p>
+<p><code>####4</code></p>
+<p><code>………一次类推………</code></p>
+<p>###2、图床&amp;链接<br>插入链接</p>
+<p><a href="https://www.baidu.com" target="_blank" rel="external">baidu</a></p>
+<p>插入图片<br><img src="http://wx4.sinaimg.cn/mw1024/6ae20627gy1fiwh3we4zaj216w16wh08.jpg" alt="key"></p>
+<p>###3、待续</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;!--
+default 灰色
+primary 深蓝
+success 绿色
+info 浅蓝
+warning 橙色
+danger 红色
+--&gt;
+&lt;div class=&quot;note primary&quot;&gt;&lt;p&gt;用 Hexo+Github 简单建立自己的个人博客，并对其进行后期优化&lt;/p&gt;&lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="Hexo" scheme="http://KinWah.top/tags/Hexo/"/>
+    
+      <category term="Github" scheme="http://KinWah.top/tags/Github/"/>
+    
+      <category term="博客" scheme="http://KinWah.top/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>黑苹果 hackintosh</title>
+    <link href="http://KinWah.top//blog/%E9%BB%91%E8%8B%B9%E6%9E%9Chackintosh%20%E6%95%99%E7%A8%8B.html"/>
+    <id>http://KinWah.top//blog/黑苹果hackintosh 教程.html</id>
+    <published>2017-08-25T16:57:41.000Z</published>
+    <updated>2017-08-25T17:27:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<!--
+default 灰色
+primary 深蓝
+success 绿色
+info 浅蓝
+warning 橙色
+danger 红色
+-->
+<div class="note danger"><p>关于黑苹果：hackintosh的一些相关只是和教程。</p></div>
+<a id="more"></a>
+<p>##使用规则</p>
+<p>###1、标题<br><code>#1</code></p>
+<p><code>##2</code></p>
+<p><code>###3</code></p>
+<p><code>####4</code></p>
+<p><code>………一次类推………</code></p>
+<p>###2、图床&amp;链接<br>插入链接</p>
+<p><a href="https://www.baidu.com" target="_blank" rel="external">baidu</a></p>
+<p>插入图片<br><img src="http://wx4.sinaimg.cn/mw1024/6ae20627gy1fiwh3we4zaj216w16wh08.jpg" alt="key"></p>
+<p>###3、待续</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;!--
+default 灰色
+primary 深蓝
+success 绿色
+info 浅蓝
+warning 橙色
+danger 红色
+--&gt;
+&lt;div class=&quot;note danger&quot;&gt;&lt;p&gt;关于黑苹果：hackintosh的一些相关只是和教程。&lt;/p&gt;&lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="黑苹果" scheme="http://KinWah.top/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/"/>
+    
+      <category term="hackintosh" scheme="http://KinWah.top/tags/hackintosh/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机械键盘攻略</title>
+    <link href="http://KinWah.top//blog/%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E9%80%89%E6%8B%A9.html"/>
+    <id>http://KinWah.top//blog/机械键盘选择.html</id>
+    <published>2017-08-25T16:56:44.000Z</published>
+    <updated>2017-08-25T17:28:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<!--
+default 灰色
+primary 深蓝
+success 绿色
+info 浅蓝
+warning 橙色
+danger 红色
+-->
+<div class="note default"><p>关于机械键盘的选择和使用，包括键帽的类型和轴体的类型，总结和推荐</p></div>
+<a id="more"></a>
+<p>##使用规则</p>
+<p>###1、标题<br><code>#1</code></p>
+<p><code>##2</code></p>
+<p><code>###3</code></p>
+<p><code>####4</code></p>
+<p><code>………一次类推………</code></p>
+<p>###2、图床&amp;链接<br>插入链接</p>
+<p><a href="https://www.baidu.com" target="_blank" rel="external">baidu</a></p>
+<p>插入图片<br><img src="http://wx4.sinaimg.cn/mw1024/6ae20627gy1fiwh3we4zaj216w16wh08.jpg" alt="key"></p>
+<p>###3、待续</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;!--
+default 灰色
+primary 深蓝
+success 绿色
+info 浅蓝
+warning 橙色
+danger 红色
+--&gt;
+&lt;div class=&quot;note default&quot;&gt;&lt;p&gt;关于机械键盘的选择和使用，包括键帽的类型和轴体的类型，总结和推荐&lt;/p&gt;&lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="机械键盘" scheme="http://KinWah.top/tags/%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端学习总结</title>
+    <link href="http://KinWah.top//blog/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0.html"/>
+    <id>http://KinWah.top//blog/前端学习.html</id>
+    <published>2017-08-25T16:54:43.000Z</published>
+    <updated>2017-08-25T17:28:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<!--
+default 灰色
+primary 深蓝
+success 绿色
+info 浅蓝
+warning 橙色
+danger 红色
+-->
+<div class="note info"><p>前端学习的总结和心得，野路子的太多了，我们来一次系统学习！</p></div>
+<a id="more"></a>
+<p>##使用规则</p>
+<p>###1、标题<br><code>#1</code></p>
+<p><code>##2</code></p>
+<p><code>###3</code></p>
+<p><code>####4</code></p>
+<p><code>………一次类推………</code></p>
+<p>###2、图床&amp;链接<br>插入链接</p>
+<p><a href="https://www.baidu.com" target="_blank" rel="external">baidu</a></p>
+<p>插入图片<br><img src="http://wx4.sinaimg.cn/mw1024/6ae20627gy1fiwh3we4zaj216w16wh08.jpg" alt="key"></p>
+<p>###3、待续</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;!--
+default 灰色
+primary 深蓝
+success 绿色
+info 浅蓝
+warning 橙色
+danger 红色
+--&gt;
+&lt;div class=&quot;note info&quot;&gt;&lt;p&gt;前端学习的总结和心得，野路子的太多了，我们来一次系统学习！&lt;/p&gt;&lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://KinWah.top/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="心得" scheme="http://KinWah.top/tags/%E5%BF%83%E5%BE%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>你好，世界</title>
     <link href="http://KinWah.top//blog/hello-world.html"/>
     <id>http://KinWah.top//blog/hello-world.html</id>
     <published>2017-08-25T05:29:14.000Z</published>
-    <updated>2017-08-25T14:07:15.000Z</updated>
+    <updated>2017-08-25T16:57:22.000Z</updated>
     
     <content type="html"><![CDATA[<div class="note primary"><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p></div>
 <a id="more"></a>
@@ -40,6 +304,12 @@
     
     </summary>
     
+    
+      <category term="JavaScript" scheme="http://KinWah.top/tags/JavaScript/"/>
+    
+      <category term="Html" scheme="http://KinWah.top/tags/Html/"/>
+    
+      <category term="Css" scheme="http://KinWah.top/tags/Css/"/>
     
   </entry>
   

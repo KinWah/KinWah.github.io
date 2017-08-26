@@ -1744,7 +1744,7 @@ pre .javascript .function {
 .site-description {
   margin-top: 0;
   text-align: center;
-  font-size: 13px;
+  font-size: 15px;
   color: #999;
 }
 .site-state {
@@ -1769,10 +1769,10 @@ pre .javascript .function {
   text-align: center;
   color: inherit;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
 }
 .site-state-item-name {
-  font-size: 13px;
+  font-size: 15px;
   color: #999;
 }
 .feed-link {
@@ -1818,7 +1818,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #948f96;
+  background: #2ac486;
 }
 .links-of-blogroll {
   font-size: 13px;

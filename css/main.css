@@ -1,12 +1,3 @@
-header {
-  width: 90%;
-}
-.container .main-inner {
-  width: 90%;
-}
-.content-wrap {
-  width: calc(100% - 260px);
-}
 /* normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif; /* 1 */
@@ -1818,7 +1809,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0ef5a7;
+  background: #988121;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2596,7 +2587,8 @@ pre .javascript .function {
 .header {
   position: relative;
   margin: 0 auto;
-  width: 960px;
+/*width: $main-desktop;*/
+  width: 90%;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .header {
@@ -2646,7 +2638,8 @@ pre .javascript .function {
   clear: both;
 }
 .container .main-inner {
-  width: 960px;
+/*width: $main-desktop;*/
+  width: 90%;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .container .main-inner {
@@ -2662,7 +2655,8 @@ pre .javascript .function {
   float: right;
   box-sizing: border-box;
   padding: 40px;
-  width: 700px;
+/*width: $content-desktop;*/
+  width: calc(100% - 260px);
   background: #fff;
   min-height: 700px;
   box-shadow: initial;

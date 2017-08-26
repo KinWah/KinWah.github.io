@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>KinWah</title>
-  <subtitle>KinWah | 记录指尖敲击的美好</subtitle>
+  <subtitle>记录指尖敲击之美</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://KinWah.top/"/>

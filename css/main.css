@@ -1046,7 +1046,7 @@ pre .javascript .function {
   right: 30px;
   z-index: 1050;
   padding: 0 6px;
-  width: initial;
+  width: 24px;
   background: #495a80;
   font-size: 12px;
   opacity: 0.6;
@@ -1492,6 +1492,9 @@ pre .javascript .function {
   font-size: 14px;
   margin-top: 2px;
 }
+.post-wordcount {
+  display: inline-block;
+}
 .post-meta-divider {
   margin: 0 0.5em;
 }
@@ -1809,7 +1812,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #87a269;
+  background: #0f34e5;
 }
 .links-of-blogroll {
   font-size: 13px;

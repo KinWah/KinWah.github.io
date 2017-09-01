@@ -122,8 +122,10 @@
 <meta property="og:image" content="http://ovl5r0omj.bkt.clouddn.com//17-9-1/68815440.jpg">
 <meta property="og:image" content="http://ovl5r0omj.bkt.clouddn.com//17-9-1/66627955.jpg">
 <meta property="og:image" content="http://ovl5r0omj.bkt.clouddn.com//17-9-1/83960977.jpg">
+<meta property="og:image" content="http://ovl5r0omj.bkt.clouddn.com//17-9-1/47439730.jpg">
+<meta property="og:image" content="http://ovl5r0omj.bkt.clouddn.com//17-9-1/39710419.jpg">
 <meta property="og:image" content="htt://ovl5r0omj.bkt.clouddn.com//17-9-1/58517498.jpg">
-<meta property="og:updated_time" content="2017-09-01T14:04:42.000Z">
+<meta property="og:updated_time" content="2017-09-01T15:40:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="动手吧，用Hexo+Github搭建个人博客">
 <meta name="twitter:description" content="前言：学习前端也有好些日子了，看到知乎或者掘金等平台上的前端大神们都有自己的私人博客，想起以前经常混迹的网易博客，突然萌发了搭建一个私人博客的想法。当然，写博客不是为了写而写，更多的是记录自己的学习和思维轨迹，同时也算是一个回顾和反思的地方。不是为了更多人能看到，而是为了让自己的思想灵魂有个安放的居所，于是就有了这篇伪教程。  趁着有空，参照了网上很多篇的教程，把自己用Hexo+Github搭建">
@@ -520,9 +522,52 @@
 <p><strong>把本地博客上传提交到Github上</strong></p>
 <p>这里就涉及到Hexo常见的几个操作了：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">hexo clean 	#删除旧的 public 文件</div><div class="line">hexo g 		#新建新的 public 文件</div><div class="line">hexo d 		#开始部署</div><div class="line">可以集合起来：</div><div class="line">hexo clean</div><div class="line">hexo d -g</div></pre></td></tr></table></figure>
-<p>当你部署完毕之后，在浏览器里面输入你的Github地址：<a href="http://KinWah.github.io" target="_blank" rel="external">http://KinWah.github.io</a>（用户名改成你的）<br>，你能看到你网站显示出来的时候，Hexo + Github Pages就已经基本配置完成了。</p>
+<p>当你部署完毕之后，在浏览器里面输入你的Github地址：<a href="http://KinWah.github.io" target="_blank" rel="external">http://KinWah.github.io</a>（用户名改成你的），你能看到你网站显示出来的时候，Hexo + Github Pages就已经基本配置完成了。</p>
+<p><strong>错误小Tips</strong>：如果部署失败了，需要安装一下扩展：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<p>完成上面的步骤，整个博客基本就可以投入使用了，接下来的进阶，就是美化优化和熟悉操作。</p>
 <hr>
-<h2 id="关联解析到个人域名"><a href="#关联解析到个人域名" class="headerlink" title="关联解析到个人域名"></a><font color="#3f51b5">关联解析到个人域名</font></h2><h2 id="Hexo-常用操作"><a href="#Hexo-常用操作" class="headerlink" title="Hexo 常用操作"></a><font color="#3f51b5">Hexo 常用操作</font></h2><h2 id="Hexo-主题美化和性能优化"><a href="#Hexo-主题美化和性能优化" class="headerlink" title="Hexo 主题美化和性能优化"></a><font color="#3f51b5">Hexo 主题美化和性能优化</font></h2><h2 id="学习并适应如何用-Markdown-写文章"><a href="#学习并适应如何用-Markdown-写文章" class="headerlink" title="学习并适应如何用 Markdown 写文章"></a><font color="#3f51b5">学习并适应如何用 Markdown 写文章</font></h2><h2 id="还看什么别人的博客？赶紧动手去搭建自己的博客去！"><a href="#还看什么别人的博客？赶紧动手去搭建自己的博客去！" class="headerlink" title="还看什么别人的博客？赶紧动手去搭建自己的博客去！"></a><font color="#3f51b5">还看什么别人的博客？赶紧动手去搭建自己的博客去！</font></h2><p><img src="htt://ovl5r0omj.bkt.clouddn.com//17-9-1/58517498.jpg" alt=""></p>
+<h2 id="关联解析到个人域名"><a href="#关联解析到个人域名" class="headerlink" title="关联解析到个人域名"></a><font color="#3f51b5">关联解析到个人域名</font></h2><blockquote>
+<p>估计大家也有想过，总是用<a href="http://xxx.github.io去查看博客确实有点让人不好记，那能不能改成自己的私人域名呢？" target="_blank" rel="external">http://xxx.github.io去查看博客确实有点让人不好记，那能不能改成自己的私人域名呢？</a></p>
+</blockquote>
+<p>为了让自己的博客看起来更加专业，更加个性化一点，绑定自己的个人域名就成为了很多人的优先选择了。</p>
+<p>域名有便宜有贵，主要就是看域名是否冷门，现在主要还是万网，阿里云，腾讯云这些，我自己就是阿里云买的域名<code>kinwah.top</code>、<code>kinwah.wang</code>，一年几块钱，还算实惠，建站初期，优先考虑，后期有能力的时候，自己可以买服务器重新配置。</p>
+<p>关于域名绑定，其实这个过程就是一个重定向的过程。</p>
+<p><strong>域名解析</strong></p>
+<p>以我自己的买的阿里云域名后台为例子：</p>
+<p>登录后，进入控制台，按照下图所示进入域名解析列表。<br><img src="http://ovl5r0omj.bkt.clouddn.com//17-9-1/47439730.jpg" alt=""></p>
+<p>选择你要绑定的域名，并点击解析：<br><img src="http://ovl5r0omj.bkt.clouddn.com//17-9-1/39710419.jpg" alt=""></p>
+<p>主要需要修改的信息，就是下面几点：</p>
+<ol>
+<li>记录类型选择 <font color="#ff4081">CNAME</font><ul>
+<li>主机记录填 <font color="#ff4081">www</font></li>
+<li>解析线路选择默认</li>
+<li>记录值填 <font color="#ff4081">yourname.github.io</font></li>
+<li><font color="#ff4081">TTL</font> 值为10分钟</li>
+</ul>
+</li>
+<li><p>记录类型选择 <font color="#ff4081">A</font></p>
+<ul>
+<li>主机记录填 <font color="#ff4081">@</font></li>
+<li>解析线路选择默认</li>
+<li><p>记录值填你<font color="#ff4081">GitHub</font> 的ip地址：</p>
+</li>
+<li><p><code>ping kinwah.github.io #通过终端ping 反馈地址的ip</code></p>
+</li>
+<li><p><font color="#ff4081">TTL</font> 值为10分钟</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>点击保存，这个时候，解析已经成功，但是还不能访问，因为我们还需要名为<code>CNAME</code>文本文件（没有后缀扩展名的），</p>
+<p><code>CNAME</code>文本文件里面只能添加我们的域名，不用加前缀<code>http://</code></p>
+<p><code>www.kinwah.top</code>添加好自己的域名，保存（再次注意，没有扩展名文件）</p>
+<p>在我们私人博客所在的Github仓库项目根目录里面添加<code>CNAME</code>文本文件，我们的私人域名才能重新定向，正常访问。</p>
+<p>由于hexo的一些机制问题，导致每次<code>hexo deploy</code>部署后，<code>CNAME</code>都会消失重建，虽然解决办法很多，为了方便，直接用最推荐的办法。</p>
+<p><strong>推荐小Tips：</strong>把需要上传部署的内容，放在根目录的source文件夹里，例如<code>CNAME</code>、<code>images</code>、<code>favicon.ico</code>等，这样在进行<code>hexo d</code>部署之后，这些文件就不再会被删除了。</p>
+<p><strong>就这样，博客整体部署，私人域名访问，基本上全部完成了！！！</strong></p>
+<hr>
+<h2 id="Hexo-常用操作"><a href="#Hexo-常用操作" class="headerlink" title="Hexo 常用操作"></a><font color="#3f51b5">Hexo 常用操作</font></h2><h2 id="Hexo-主题美化和性能优化"><a href="#Hexo-主题美化和性能优化" class="headerlink" title="Hexo 主题美化和性能优化"></a><font color="#3f51b5">Hexo 主题美化和性能优化</font></h2><h2 id="学习并适应如何用-Markdown-写文章"><a href="#学习并适应如何用-Markdown-写文章" class="headerlink" title="学习并适应如何用 Markdown 写文章"></a><font color="#3f51b5">学习并适应如何用 Markdown 写文章</font></h2><h2 id="还看什么别人的博客？赶紧动手去搭建自己的博客去！"><a href="#还看什么别人的博客？赶紧动手去搭建自己的博客去！" class="headerlink" title="还看什么别人的博客？赶紧动手去搭建自己的博客去！"></a><font color="#3f51b5">还看什么别人的博客？赶紧动手去搭建自己的博客去！</font></h2><p><img src="htt://ovl5r0omj.bkt.clouddn.com//17-9-1/58517498.jpg" alt=""></p>
 
       
     </div>

@@ -115,8 +115,9 @@
 <meta property="og:image" content="http://ovl5r0omj.bkt.clouddn.com//17-9-1/16711443.jpg">
 <meta property="og:image" content="http://ovl5r0omj.bkt.clouddn.com//17-9-1/69891057.jpg">
 <meta property="og:image" content="http://ovl5r0omj.bkt.clouddn.com//17-9-1/82164945.jpg">
+<meta property="og:image" content="http://ovl5r0omj.bkt.clouddn.com//17-9-1/98352003.jpg">
 <meta property="og:image" content="htt://ovl5r0omj.bkt.clouddn.com//17-9-1/58517498.jpg">
-<meta property="og:updated_time" content="2017-09-01T07:33:25.000Z">
+<meta property="og:updated_time" content="2017-09-01T08:26:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="动手吧，用Hexo+Github搭建一个私人博客">
 <meta name="twitter:description" content="前言：学习前端也有好些日子了，看到知乎或者掘金等平台上的前端大神们都有自己的私人博客，想起以前经常混迹的网易博客，突然萌发了搭建一个私人博客的想法。当然，写博客不是为了写而写，更多的是记录自己的学习和思维轨迹，同时也算是一个回顾和反思的地方。不是为了更多人能看到，而是为了让自己的思想灵魂有个安放的居所，于是就有了这篇伪教程。  趁着有空，参照了网上很多篇的教程，把自己用 Hexo+Github">
@@ -392,7 +393,8 @@
 </blockquote>
 <p>趁着有空，参照了网上很多篇的教程，把自己用 Hexo+Github 搭建博客的过程记录了一番：</p>
 <p>我的博客地址：<a href="http://kinwah.top">http://kinwah.top</a><br><a id="more"></a></p>
-<h2 id="流程概括"><a href="#流程概括" class="headerlink" title="流程概括"></a>流程概括</h2><ol>
+<h1 id="流程概括"><a href="#流程概括" class="headerlink" title="流程概括"></a><font color="#3f51b5">流程概括</font></h1><p>-</p>
+<ol>
 <li>本地搭建 Node.js 环境</li>
 <li>本地搭建 Git 环境</li>
 <li>注册并配置 Github帐号</li>
@@ -407,14 +409,16 @@
 <blockquote>
 <p>本教程适用于MacOS，如果是Win系统下，相似的操作和命令行是可以参考借鉴的，macOS下的终端，Win下就是命令行cmd。</p>
 </blockquote>
-<h2 id="本地搭建-Node-js-环境"><a href="#本地搭建-Node-js-环境" class="headerlink" title="本地搭建 Node.js 环境"></a>本地搭建 Node.js 环境</h2><blockquote>
+<h2 id="本地搭建-Node-js-环境"><a href="#本地搭建-Node-js-环境" class="headerlink" title="本地搭建 Node.js 环境"></a><font color="#3f51b5">本地搭建 Node.js 环境</font></h2><p>-</p>
+<blockquote>
 <p>由于Hexo博客系统是基于Node.js编写的，所以搭建Node.js环境是必不可少的环节。</p>
 </blockquote>
 <p>先去Node.js官网（中文网）：<a href="http://nodejs.cn/" target="_blank" rel="external">http://nodejs.cn/</a> 下载最新的安装包（注意自己的系统类型）</p>
 <p>安装过程一般都会的，就是一路next就好，macOS和win都是。</p>
 <p>接下来打开终端，输入<code>node -v</code>、<code>npm -v</code> 如果能正确显示版本号，说明Node.js环境配置完成，这是关键的第一步。</p>
 <p><img src="http://ovl5r0omj.bkt.clouddn.com//17-9-1/16711443.jpg" alt=""></p>
-<h2 id="本地搭建-Git-环境"><a href="#本地搭建-Git-环境" class="headerlink" title="本地搭建 Git 环境"></a>本地搭建 Git 环境</h2><blockquote>
+<h2 id="本地搭建-Git-环境"><a href="#本地搭建-Git-环境" class="headerlink" title="本地搭建 Git 环境"></a><font color="#3f51b5">本地搭建 Git 环境</font></h2><p>-</p>
+<blockquote>
 <p>由于我们需要把本地写好的博客文章，提交到Github上，所以搭建Git环境也是必不可少的一环。</p>
 </blockquote>
 <p><strong>安装Git有两种办法</strong></p>
@@ -425,7 +429,7 @@
 <ul>
 <li>安装homebrew：在终端里，直接复制下面这段代码，并运行: </li>
 </ul>
-<p><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</div></pre></td></tr></table></figure>
 <ul>
 <li>输入<code>brew -v</code>查看homebrew是否安装成功。</li>
 </ul>
@@ -436,8 +440,24 @@
 </ul>
 <p><img src="http://ovl5r0omj.bkt.clouddn.com//17-9-1/82164945.jpg" alt=""></p>
 <p>到此，Git环境也算是搭建完毕了，第二部顺利完成。</p>
-<h2 id="注册并配置Github帐号"><a href="#注册并配置Github帐号" class="headerlink" title="注册并配置Github帐号"></a>注册并配置Github帐号</h2><p>&gt;</p>
-<p><img src="htt://ovl5r0omj.bkt.clouddn.com//17-9-1/58517498.jpg" alt=""></p>
+<h2 id="注册并配置Github帐号"><a href="#注册并配置Github帐号" class="headerlink" title="注册并配置Github帐号"></a><font color="#3f51b5">注册并配置Github帐号</font></h2><p>-</p>
+<blockquote>
+<p>GitHub 是一个代码托管平台，因为只支持 Git 作为唯一的版本库格式进行托管，故名 GitHub。</p>
+</blockquote>
+<ul>
+<li>对于拥有个人的github帐号，似乎已经成了现在程序员的标配了（瞎说瞎说，别打我），所以关于注册github帐号就不多作解释了。</li>
+</ul>
+<p>Github注册：<a href="https://github.com/" target="_blank" rel="external">https://github.com/</a></p>
+<p>创建博客相关文件仓库：Create a new repository。这个仓库的命名是有规则的：xxx.github.io</p>
+<p>其中，Repository name用你的用账户名称：<font color="#ff4081">Owner.github.io</font> ，如下图所示</p>
+<p><img src="http://ovl5r0omj.bkt.clouddn.com//17-9-1/98352003.jpg" alt=""></p>
+<p>然后访问：Owner.github.io，如果正常访问，没有提示404错误，说明你的Github已经配置完成，</p>
+<p>Hexo的前期准备工作，所有需要的环境配置都已经完毕，就可以进行博客配置和设置了。</p>
+<h2 id="安装并配置-Hexo"><a href="#安装并配置-Hexo" class="headerlink" title="安装并配置 Hexo"></a><font color="#3f51b5">安装并配置 Hexo</font></h2><p>-</p>
+<blockquote>
+<p>Hexo 是一个快速、简洁且高效的博客框架，使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+</blockquote>
+<h2 id="关联-Hexo-和-Github-Pages"><a href="#关联-Hexo-和-Github-Pages" class="headerlink" title="关联 Hexo 和 Github Pages"></a><font color="#3f51b5">关联 Hexo 和 Github Pages</font></h2><h2 id="关联解析到个人域名"><a href="#关联解析到个人域名" class="headerlink" title="关联解析到个人域名"></a><font color="#3f51b5">关联解析到个人域名</font></h2><h2 id="Hexo-常用操作"><a href="#Hexo-常用操作" class="headerlink" title="Hexo 常用操作"></a><font color="#3f51b5">Hexo 常用操作</font></h2><h2 id="Hexo-主题美化和性能优化"><a href="#Hexo-主题美化和性能优化" class="headerlink" title="Hexo 主题美化和性能优化"></a><font color="#3f51b5">Hexo 主题美化和性能优化</font></h2><h2 id="学习并适应如何用-Markdown-写文章"><a href="#学习并适应如何用-Markdown-写文章" class="headerlink" title="学习并适应如何用 Markdown 写文章"></a><font color="#3f51b5">学习并适应如何用 Markdown 写文章</font></h2><h2 id="还看什么别人的博客？赶紧动手去搭建自己的博客去！"><a href="#还看什么别人的博客？赶紧动手去搭建自己的博客去！" class="headerlink" title="还看什么别人的博客？赶紧动手去搭建自己的博客去！"></a><font color="#3f51b5">还看什么别人的博客？赶紧动手去搭建自己的博客去！</font></h2><p><img src="htt://ovl5r0omj.bkt.clouddn.com//17-9-1/58517498.jpg" alt=""></p>
 
       
     </div>
@@ -739,7 +759,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#流程概括"><span class="nav-number">1.</span> <span class="nav-text">流程概括</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地搭建-Node-js-环境"><span class="nav-number">2.</span> <span class="nav-text">本地搭建 Node.js 环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地搭建-Git-环境"><span class="nav-number">3.</span> <span class="nav-text">本地搭建 Git 环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注册并配置Github帐号"><span class="nav-number">4.</span> <span class="nav-text">注册并配置Github帐号</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#流程概括"><span class="nav-number">1.</span> <span class="nav-text">流程概括</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#本地搭建-Node-js-环境"><span class="nav-number">1.1.</span> <span class="nav-text">本地搭建 Node.js 环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地搭建-Git-环境"><span class="nav-number">1.2.</span> <span class="nav-text">本地搭建 Git 环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注册并配置Github帐号"><span class="nav-number">1.3.</span> <span class="nav-text">注册并配置Github帐号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装并配置-Hexo"><span class="nav-number">1.4.</span> <span class="nav-text">安装并配置 Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关联-Hexo-和-Github-Pages"><span class="nav-number">1.5.</span> <span class="nav-text">关联 Hexo 和 Github Pages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关联解析到个人域名"><span class="nav-number">1.6.</span> <span class="nav-text">关联解析到个人域名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-常用操作"><span class="nav-number">1.7.</span> <span class="nav-text">Hexo 常用操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-主题美化和性能优化"><span class="nav-number">1.8.</span> <span class="nav-text">Hexo 主题美化和性能优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#学习并适应如何用-Markdown-写文章"><span class="nav-number">1.9.</span> <span class="nav-text">学习并适应如何用 Markdown 写文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#还看什么别人的博客？赶紧动手去搭建自己的博客去！"><span class="nav-number">1.10.</span> <span class="nav-text">还看什么别人的博客？赶紧动手去搭建自己的博客去！</span></a></li></ol></li></ol></div>
             
 
           </div>

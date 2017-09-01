@@ -2074,14 +2074,14 @@ danger 红色
     <link href="http://KinWah.top//blog/%E7%94%A8hexo+github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html"/>
     <id>http://KinWah.top//blog/用hexo+github搭建个人博客.html</id>
     <published>2017-08-25T16:50:43.000Z</published>
-    <updated>2017-09-01T08:35:37.000Z</updated>
+    <updated>2017-09-01T08:43:09.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>前言：学习前端也有好些日子了，看到知乎或者掘金等平台上的前端大神们都有自己的私人博客，想起以前经常混迹的网易博客，突然萌发了搭建一个私人博客的想法。当然，写博客不是为了写而写，更多的是记录自己的学习和思维轨迹，同时也算是一个回顾和反思的地方。不是为了更多人能看到，而是为了让自己的思想灵魂有个安放的居所，于是就有了这篇伪教程。</p>
 </blockquote>
 <p>趁着有空，参照了网上很多篇的教程，把自己用 Hexo+Github 搭建博客的过程记录了一番：</p>
 <p>我的博客地址：<a href="http://kinwah.top">http://kinwah.top</a><br><a id="more"></a></p>
-<h1 id="流程概括"><a href="#流程概括" class="headerlink" title="流程概括"></a><font color="#3f51b5">流程概括</font></h1><p>-</p>
+<h1 id="流程概括"><a href="#流程概括" class="headerlink" title="流程概括"></a><font color="#3f51b5">流程概括</font></h1><hr>
 <ol>
 <li>本地搭建 Node.js 环境</li>
 <li>本地搭建 Git 环境</li>
@@ -2097,7 +2097,7 @@ danger 红色
 <blockquote>
 <p>本教程适用于MacOS，如果是Win系统下，相似的操作和命令行是可以参考借鉴的，macOS下的终端，Win下就是命令行cmd。</p>
 </blockquote>
-<h2 id="本地搭建-Node-js-环境"><a href="#本地搭建-Node-js-环境" class="headerlink" title="本地搭建 Node.js 环境"></a><font color="#3f51b5">本地搭建 Node.js 环境</font></h2><p>-</p>
+<h2 id="本地搭建-Node-js-环境"><a href="#本地搭建-Node-js-环境" class="headerlink" title="本地搭建 Node.js 环境"></a><font color="#3f51b5">本地搭建 Node.js 环境</font></h2><hr>
 <blockquote>
 <p>由于Hexo博客系统是基于Node.js编写的，所以搭建Node.js环境是必不可少的环节。</p>
 </blockquote>
@@ -2105,7 +2105,7 @@ danger 红色
 <p>安装过程一般都会的，就是一路next就好，macOS和win都是。</p>
 <p>接下来打开终端，输入<code>node -v</code>、<code>npm -v</code> 如果能正确显示版本号，说明Node.js环境配置完成，这是关键的第一步。</p>
 <p><img src="http://ovl5r0omj.bkt.clouddn.com//17-9-1/16711443.jpg" alt=""></p>
-<h2 id="本地搭建-Git-环境"><a href="#本地搭建-Git-环境" class="headerlink" title="本地搭建 Git 环境"></a><font color="#3f51b5">本地搭建 Git 环境</font></h2><p>-</p>
+<h2 id="本地搭建-Git-环境"><a href="#本地搭建-Git-环境" class="headerlink" title="本地搭建 Git 环境"></a><font color="#3f51b5">本地搭建 Git 环境</font></h2><hr>
 <blockquote>
 <p>由于我们需要把本地写好的博客文章，提交到Github上，所以搭建Git环境也是必不可少的一环。</p>
 </blockquote>
@@ -2128,7 +2128,7 @@ danger 红色
 </ul>
 <p><img src="http://ovl5r0omj.bkt.clouddn.com//17-9-1/82164945.jpg" alt=""></p>
 <p>到此，Git环境也算是搭建完毕了，第二部顺利完成。</p>
-<h2 id="注册并配置Github帐号"><a href="#注册并配置Github帐号" class="headerlink" title="注册并配置Github帐号"></a><font color="#3f51b5">注册并配置Github帐号</font></h2><p>-</p>
+<h2 id="注册并配置Github帐号"><a href="#注册并配置Github帐号" class="headerlink" title="注册并配置Github帐号"></a><font color="#3f51b5">注册并配置Github帐号</font></h2><hr>
 <blockquote>
 <p>GitHub 是一个代码托管平台，因为只支持 Git 作为唯一的版本库格式进行托管，故名 GitHub。</p>
 </blockquote>
@@ -2141,7 +2141,7 @@ danger 红色
 <p><img src="http://ovl5r0omj.bkt.clouddn.com//17-9-1/98352003.jpg" alt=""></p>
 <p>然后访问：Owner.github.io，如果正常访问，没有提示404错误，说明你的Github已经配置完成，</p>
 <p>Hexo的前期准备工作，所有需要的环境配置都已经完毕，就可以进行博客配置和设置了。</p>
-<h2 id="安装并配置-Hexo"><a href="#安装并配置-Hexo" class="headerlink" title="安装并配置 Hexo"></a><font color="#3f51b5">安装并配置 Hexo</font></h2><p>-</p>
+<h2 id="安装并配置-Hexo"><a href="#安装并配置-Hexo" class="headerlink" title="安装并配置 Hexo"></a><font color="#3f51b5">安装并配置 Hexo</font></h2><hr>
 <blockquote>
 <p>Hexo 是一个快速、简洁且高效的博客框架，使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
 </blockquote>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://KinWah.top/"/>
-  <updated>2017-09-01T18:17:52.000Z</updated>
+  <updated>2017-09-01T18:24:33.000Z</updated>
   <id>http://KinWah.top/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://KinWah.top//blog/%E5%8A%A8%E6%89%8B%E5%90%A7%EF%BC%8C%E7%94%A8Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html"/>
     <id>http://KinWah.top//blog/动手吧，用Hexo+Github搭建个人博客.html</id>
     <published>2017-08-25T16:50:43.000Z</published>
-    <updated>2017-09-01T18:17:52.000Z</updated>
+    <updated>2017-09-01T18:24:33.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>前言：学习前端也有好些日子了，看到知乎或者掘金等平台上的前端大神们都有自己的私人博客，想起以前经常混迹的网易博客，突然萌发了搭建一个私人博客的想法。当然，写博客不是为了写而写，更多的是记录自己的学习和思维轨迹，同时也算是一个回顾和反思的地方，于是就有了这篇伪教程。</p>
@@ -172,44 +172,45 @@
 <li><font color="#ff4081">TTL</font> 值为10分钟</li>
 </ul>
 </li>
-<li><p>记录类型选择 <font color="#ff4081">A</font></p>
-<ul>
+<li>记录类型选择 <font color="#ff4081">A</font><ul>
 <li>主机记录填 <font color="#ff4081">@</font></li>
 <li>解析线路选择默认</li>
-<li><p>记录值填你<font color="#ff4081">GitHub</font> 的ip地址：</p>
-</li>
-<li><figure class="highlight plain"><figcaption><span>kinwah.github.io #通过终端ping 反馈地址的ip```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">  - &lt;font color=#ff4081&gt;TTL&lt;/font&gt; 值为10分钟</div><div class="line"></div><div class="line">点击保存，这个时候，解析已经成功，但是还不能访问，因为我们还需要一个`CNAME`文本文件，`CNAME`文本文件里面只能添加我们的域名，不用加前缀`http://`，只需要写域名就好。</div><div class="line"></div><div class="line">```www.kinwah.top```添加好自己的域名，保存（再次注意，没有扩展名文件）</div><div class="line"></div><div class="line">在我们私人博客所在的Github仓库项目根目录里面添加`CNAME`文本文件，我们的私人域名才能重新定向，正常访问。</div><div class="line"></div><div class="line">由于hexo的一些机制问题，导致每次`hexo deploy`部署后，`CNAME`都会消失重建，虽然解决办法很多，为了方便，直接用最推荐的办法。</div><div class="line"></div><div class="line">**推荐小Tips：**把需要上传部署的内容，放在根目录的source文件夹里，例如`CNAME`、`images`、`favicon.ico`等，这样在进行`hexo d`部署之后，这些文件就不再会被删除了。</div><div class="line"></div><div class="line">**以上，博客整体部署，私人域名访问，基本上全部完成了！！！**</div><div class="line"></div><div class="line">***</div><div class="line"></div><div class="line">## &lt;font color=&quot;#3f51b5&quot;&gt;Hexo 常用操作&lt;/font&gt;</div><div class="line">&gt;下面，主要列举一些Hexo的常用指令和操作，让你的指尖之旅更加愉悦高效。</div><div class="line"></div><div class="line">**发表文章**</div></pre></td></tr></table></figure>
-</li>
+<li>记录值填你<font color="#ff4081">GitHub</font> 的ip地址：</li>
+<li><code>ping kinwah.github.io #通过终端ping 反馈地址的ip</code></li>
+<li><font color="#ff4081">TTL</font> 值为10分钟</li>
 </ul>
 </li>
 </ol>
-<p>hexo new “标题”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">可以在博客更目录下：`source\_posts`文件夹里看到自己建立的`标题.md`的Markdown文件，点击进去可以进行你的内容创造。</div><div class="line"></div><div class="line">除此之外，还可以直接在`source\_posts`文件夹里直接创建新的Markdown文件，效果也是差不多的。</div><div class="line"></div><div class="line">编辑好文章好，就是常用的操作了，这个操作几乎是你每次写完文章的必备指令：</div></pre></td></tr></table></figure></p>
-<p>hexo clean     #类似清除缓存<br>hexo d -g     #新建html并重新部署<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">**显示阅读全文**</div><div class="line"></div><div class="line">进入自己博客首页的时候，博文不想全文显示的时候，可以添加`&lt;!-- more --&gt;`指令，在你想显示的文本最后添加这条指令，后面全部内容将会隐藏起来，然后博文列表里会出现`阅读全文`的字样。</div><div class="line"></div><div class="line">除了这个人为可控的办法外，还有一个自动隐藏的办法，前提是你添加了集成该功能的主题配置文件如（NexT），</div><div class="line"></div><div class="line">在相关主题配置文件`_config.yml`里，找到这段代码，把`enable: false`改成`enable: true`（注意冒号后面一定要空格）</div></pre></td></tr></table></figure></p>
-<h1 id="Automatically-Excerpt-Not-recommend"><a href="#Automatically-Excerpt-Not-recommend" class="headerlink" title="Automatically Excerpt. Not recommend."></a>Automatically Excerpt. Not recommend.</h1><h1 id="Please-use-in-the-post-to-control-excerpt-accurately"><a href="#Please-use-in-the-post-to-control-excerpt-accurately" class="headerlink" title="Please use  in the post to control excerpt accurately."></a>Please use <!-- more --> in the post to control excerpt accurately.</h1><p>auto_excerpt:<br>  enable: true #修改这里<br>  length: 150  #在列表里，最多可显示的字数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">**更改主题**</div><div class="line"></div><div class="line">Hexo官方的主题库：[https://hexo.io/themes/](https://hexo.io/themes/)</div><div class="line"></div><div class="line">Hexo的流行程度，也让它的相关插件和主题都有非常多的选择，我现在只用了最为大家所推荐的`Next`主题，</div><div class="line"></div><div class="line">`Next`主题的官方文档：[http://theme-next.iissnan.com/](http://theme-next.iissnan.com/)</div><div class="line">```精于心，简于形</div></pre></td></tr></table></figure></p>
-<p>全中文的放心阅读，好好看一下，非常简单易懂，5分钟就能搞定。</p>
-<p><img src="http://ovl5r0omj.bkt.clouddn.com//17-9-2/64723002.jpg" alt=""></p>
-<p><strong>Next 主题美化和性能优化</strong></p>
-<blockquote>
-<p>由于我用的是<code>Next</code>主题，所以这里的美化和优化主要围绕<code>Next</code>主题。</p>
+<p>点击保存，这个时候，解析已经成功，但是还不能访问，因为我们还需要一个<code>CNAME</code>文本文件，<code>CNAME</code>文本文件里面只能添加我们的域名，不用加前缀<code>http://</code>，只需要写域名就好。</p>
+<p><code>www.kinwah.top</code>添加好自己的域名，保存（再次注意，没有扩展名文件）</p>
+<p>在我们私人博客所在的Github仓库项目根目录里面添加<code>CNAME</code>文本文件，我们的私人域名才能重新定向，正常访问。</p>
+<p>由于hexo的一些机制问题，导致每次<code>hexo deploy</code>部署后，<code>CNAME</code>都会消失重建，虽然解决办法很多，为了方便，直接用最推荐的办法。</p>
+<p><strong>推荐小Tips：</strong>把需要上传部署的内容，放在根目录的source文件夹里，例如<code>CNAME</code>、<code>images</code>、<code>favicon.ico</code>等，这样在进行<code>hexo d</code>部署之后，这些文件就不再会被删除了。</p>
+<p><strong>以上，博客整体部署，私人域名访问，基本上全部完成了！！！</strong></p>
+<hr>
+<h2 id="Hexo-常用操作"><a href="#Hexo-常用操作" class="headerlink" title="Hexo 常用操作"></a><font color="#3f51b5">Hexo 常用操作</font></h2><blockquote>
+<p>下面，主要列举一些Hexo的常用指令和操作，让你的指尖之旅更加愉悦高效。</p>
 </blockquote>
-<p>参考教程：<a href="http://www.jianshu.com/p/f054333ac9e6" target="_blank" rel="external">http://www.jianshu.com/p/f054333ac9e6</a></p>
-<p>这个教程里有三十种常见的炫酷效果，实在太多了，就不一一在列表里列举了，</p>
-<p>推荐几个比较常见的：</p>
-<p><code>添加RSS</code>、<code>添加动态背景</code>、<code>侧边栏社交小图标设置</code>、<code>在网站底部加上访问量</code>、<code>设置网站的图标Favicon</code>、<code>实现统计功能</code>。</p>
-<p>剩下的，大家看自己需求，参考教程添加就好。每次修改好主题，都可以使用<code>hexo s</code>本地预览观看，再决定是否部署。</p>
-<p><strong>如何更改内容区域的宽度？</strong></p>
-<p>这是一个比较常见的问题，貌似很多人都迫切想解决，博客的主题左右留白太多，想让内容充实一点，不要太多空白。</p>
-<p><code>Next</code>主题集成了三种样式，修改方式如下：</p>
-<ol>
-<li>编辑主题的 <code>next/source/css/_variables/custom.styl</code> 文件，新增变量：</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// 修改成你期望的宽度</div><div class="line">$content-desktop = 700px</div><div class="line"></div><div class="line">// 当视窗超过 1600px 后的宽度</div><div class="line">$content-desktop-large = 900px</div></pre></td></tr></table></figure>
-<ol>
-<li>如果是<code>Pisces Scheme</code>风格，需要同时修改<code>header</code>的宽度、<code>.main-inner</code>的宽度以及<code>.content-wrap</code>的宽度。编辑主题的<code>next/source/css/_schemes/Pisces/_layout.styl</code>文件，新增变量：</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// 用百分比设置，可以更好的适配不同的屏幕大小</div><div class="line">.header&#123; width: 80%; &#125; /* 80% */</div><div class="line">.container .main-inner &#123; width: 80%; &#125; /* 80% */</div><div class="line">.content-wrap &#123; width: calc(100% - 260px); &#125;</div></pre></td></tr></table></figure>
-<p>另外，开了背景动画的朋友，如果觉得网站打开速度太慢，不妨试着关闭掉它来提高整体访问速度，放读者更舒心：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Canvas-nest</div><div class="line">canvas_nest: false</div><div class="line"></div><div class="line"># three_waves</div><div class="line">three_waves: false</div></pre></td></tr></table></figure>
+<p><strong>发表文章</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;标题&quot;</div></pre></td></tr></table></figure>
+<p>可以在博客更目录下：<code>source\_posts</code>文件夹里看到自己建立的<code>标题.md</code>的Markdown文件，点击进去可以进行你的内容创造。</p>
+<p>除此之外，还可以直接在<code>source\_posts</code>文件夹里直接创建新的Markdown文件，效果也是差不多的。</p>
+<p>编辑好文章好，就是常用的操作了，这个操作几乎是你每次写完文章的必备指令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo clean 	#类似清除缓存</div><div class="line">hexo d -g 	#新建html并重新部署</div></pre></td></tr></table></figure>
+<p><strong>显示阅读全文</strong></p>
+<p>进入自己博客首页的时候，博文不想全文显示的时候，可以添加<code>&lt;!-- more --&gt;</code>指令，在你想显示的文本最后添加这条指令，后面全部内容将会隐藏起来，然后博文列表里会出现<code>阅读全文</code>的字样。</p>
+<p>除了这个人为可控的办法外，还有一个自动隐藏的办法，前提是你添加了集成该功能的主题配置文件如（NexT），</p>
+<p>在相关主题配置文件<code>_config.yml</code>里，找到这段代码，把<code>enable: false</code>改成<code>enable: true</code>（注意冒号后面一定要空格）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Automatically Excerpt. Not recommend.</div><div class="line"># Please use &lt;!-- more --&gt; in the post to control excerpt accurately.</div><div class="line"> auto_excerpt:</div><div class="line"> enable: true #修改这里</div><div class="line"> length: 150  #在列表里，最多可显示的字数</div></pre></td></tr></table></figure>
+<p><strong>更改主题</strong></p>
+<p>Hexo官方的主题库：<a href="https://hexo.io/themes/" target="_blank" rel="external">https://hexo.io/themes/</a></p>
+<p>Hexo的流行程度，也让它的相关插件和主题都有非常多的选择，我现在只用了最为大家所推荐的<code>Next</code>主题，</p>
+<p><code>Next</code>主题的官方文档：<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">http://theme-next.iissnan.com/</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">全中文的放心阅读，好好看一下，非常简单易懂，5分钟就能搞定。</div><div class="line"></div><div class="line">![](http://ovl5r0omj.bkt.clouddn.com//17-9-2/64723002.jpg)</div><div class="line"></div><div class="line">**Next 主题美化和性能优化**</div><div class="line">&gt;由于我用的是`Next`主题，所以这里的美化和优化主要围绕`Next`主题。</div><div class="line"></div><div class="line">参考教程：[http://www.jianshu.com/p/f054333ac9e6](http://www.jianshu.com/p/f054333ac9e6)</div><div class="line"></div><div class="line">这个教程里有三十种常见的炫酷效果，实在太多了，就不一一在列表里列举了，</div><div class="line"></div><div class="line">推荐几个比较常见的：</div><div class="line"></div><div class="line">`添加RSS`、`添加动态背景`、`侧边栏社交小图标设置`、`在网站底部加上访问量`、`设置网站的图标Favicon`、`实现统计功能`。</div><div class="line"></div><div class="line">剩下的，大家看自己需求，参考教程添加就好。每次修改好主题，都可以使用`hexo s`本地预览观看，再决定是否部署。</div><div class="line"></div><div class="line">**如何更改内容区域的宽度？**</div><div class="line"></div><div class="line">这是一个比较常见的问题，貌似很多人都迫切想解决，博客的主题左右留白太多，想让内容充实一点，不要太多空白。</div><div class="line"></div><div class="line">`Next`主题集成了三种样式，修改方式如下：</div><div class="line"></div><div class="line">1. 编辑主题的 `next/source/css/_variables/custom.styl` 文件，新增变量：</div></pre></td></tr></table></figure></p>
+<p>// 修改成你期望的宽度<br>$content-desktop = 700px</p>
+<p>// 当视窗超过 1600px 后的宽度<br>$content-desktop-large = 900px<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">2. 如果是`Pisces Scheme`风格，需要同时修改`header`的宽度、`.main-inner`的宽度以及`.content-wrap`的宽度。编辑主题的`next/source/css/_schemes/Pisces/_layout.styl`文件，新增变量：</div></pre></td></tr></table></figure></p>
+<p>// 用百分比设置，可以更好的适配不同的屏幕大小<br>.header{ width: 80%; } /<em> 80% </em>/<br>.container .main-inner { width: 80%; } /<em> 80% </em>/<br>.content-wrap { width: calc(100% - 260px); }<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">另外，开了背景动画的朋友，如果觉得网站打开速度太慢，不妨试着关闭掉它来提高整体访问速度，放读者更舒心：</div></pre></td></tr></table></figure></p>
+<h1 id="Canvas-nest"><a href="#Canvas-nest" class="headerlink" title="Canvas-nest"></a>Canvas-nest</h1><p>canvas_nest: false</p>
+<h1 id="three-waves"><a href="#three-waves" class="headerlink" title="three_waves"></a>three_waves</h1><p>three_waves: false<br>```</p>
 <blockquote>
 <p>其实还有很多更细节的操作和使用技巧，这里就不一一列举了，大家可以使用过程中慢慢发现！</p>
 </blockquote>

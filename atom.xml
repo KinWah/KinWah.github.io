@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://KinWah.top/"/>
-  <updated>2017-09-01T18:30:49.000Z</updated>
+  <updated>2017-09-01T18:32:34.000Z</updated>
   <id>http://KinWah.top/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://KinWah.top//blog/%E5%8A%A8%E6%89%8B%E5%90%A7%EF%BC%8C%E7%94%A8Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html"/>
     <id>http://KinWah.top//blog/动手吧，用Hexo+Github搭建个人博客.html</id>
     <published>2017-08-25T16:50:43.000Z</published>
-    <updated>2017-09-01T18:30:49.000Z</updated>
+    <updated>2017-09-01T18:32:34.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>前言：学习前端也有好些日子了，看到知乎或者掘金等平台上的前端大神们都有自己的私人博客，想起以前经常混迹的网易博客，突然萌发了搭建一个私人博客的想法。当然，写博客不是为了写而写，更多的是记录自己的学习和思维轨迹，同时也算是一个回顾和反思的地方，于是就有了这篇伪教程。</p>

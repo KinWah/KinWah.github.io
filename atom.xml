@@ -2074,7 +2074,7 @@ danger 红色
     <link href="http://KinWah.top//blog/%E7%94%A8hexo+github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html"/>
     <id>http://KinWah.top//blog/用hexo+github搭建个人博客.html</id>
     <published>2017-08-25T16:50:43.000Z</published>
-    <updated>2017-09-01T11:45:31.000Z</updated>
+    <updated>2017-09-01T14:02:35.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>前言：学习前端也有好些日子了，看到知乎或者掘金等平台上的前端大神们都有自己的私人博客，想起以前经常混迹的网易博客，突然萌发了搭建一个私人博客的想法。当然，写博客不是为了写而写，更多的是记录自己的学习和思维轨迹，同时也算是一个回顾和反思的地方。不是为了更多人能看到，而是为了让自己的思想灵魂有个安放的居所，于是就有了这篇伪教程。</p>
@@ -2135,7 +2135,7 @@ danger 红色
 <ul>
 <li>对于拥有个人的github帐号，似乎已经成了现在程序员的标配了（瞎说瞎说，别打我），所以关于注册github帐号就不多作解释了。</li>
 </ul>
-<p>Github注册：<a href="https://github.com/" target="_blank" rel="external">https://github.com/</a></p>
+<p><strong>Github注册：<a href="https://github.com/" target="_blank" rel="external">https://github.com/</a></strong></p>
 <p>创建博客相关文件仓库：Create a new repository。这个仓库的命名是有规则的：xxx.github.io</p>
 <p>其中，Repository name用你的用账户名称：<font color="#ff4081">Owner.github.io</font> ，如下图所示</p>
 <p><img src="http://ovl5r0omj.bkt.clouddn.com//17-9-1/98352003.jpg" alt=""></p>
@@ -2153,7 +2153,7 @@ danger 红色
 <p>在终端里，把代码复制进去就完成了安装。期间可能会出现多个<font color="#ff4081">WARN</font>，别担心这不会影响使用，估计是服务器抽风而已。</p>
 <p>然后像node和git一样，输入<code>hexo -v</code> 查看hexo版本，来确认安装是否完成。</p>
 <p><img src="http://ovl5r0omj.bkt.clouddn.com//17-9-1/3432682.jpg" alt=""></p>
-<p>接下来最重要的，就是建站了。</p>
+<p><strong>接下来最重要的，就是建站了。</strong></p>
 <blockquote>
 <p>这里有个比较重要的点需要提醒，很多人安装了hexo之后，找不到自己的blog文件夹再哪，这里先提前教大家一个我个人觉得更加方便的办法。</p>
 </blockquote>
@@ -2183,13 +2183,27 @@ danger 红色
 <h2 id="关联-Hexo-和-Github-Pages"><a href="#关联-Hexo-和-Github-Pages" class="headerlink" title="关联 Hexo 和 Github Pages"></a><font color="#3f51b5">关联 Hexo 和 Github Pages</font></h2><blockquote>
 <p>这一步，就是将你的博客发布到网上，并且可以让大家都可以进行访问的重要步骤。</p>
 </blockquote>
+<p><strong>生成SSH key</strong></p>
 <p>先来生成添加秘钥SSH，终端里输入一下代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;Github的注册邮箱地址&quot;  #一路Enter配置就行了。</div></pre></td></tr></table></figure>
 <p><img src="http://ovl5r0omj.bkt.clouddn.com//17-9-1/66627955.jpg" alt=""></p>
-<p>进入这个地址，用文本编辑器打开<code>id_rsa.pub</code>文件，然后把里面的内容全部复制下来（全部Ctrl+A），</p>
+<p>进入这个地址，.ssh文件夹是隐藏的（shift+command+. 可以显示隐藏文件），用文本编辑器打开<code>id_rsa.pub</code>文件，然后把里面的内容全部复制下来（全部Ctrl+A），</p>
 <p>然后进入：<a href="https://github.com/settings/ssh" target="_blank" rel="external">https://github.com/settings/ssh</a>：</p>
 <p><img src="http://ovl5r0omj.bkt.clouddn.com//17-9-1/83960977.jpg" alt=""></p>
 <p>把内容粘贴到<code>Key</code>下面，<code>Title</code>随意填写就好。</p>
+<p><strong>配置Git个人信息</strong></p>
+<p>安装好git后，配置用户名和用户邮箱，以后每次与Git的交互都会使用该信息。打开终端，输入以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &quot;KinWah&quot; #改成你的Github用户名</div><div class="line">git config --global user.email &quot;591264998@qq.com&quot; #改成你的Github邮箱</div></pre></td></tr></table></figure>
+<p>配置信息可以随时更改，以后想要更改使用上面指令，修改姓名和邮箱就可以。</p>
+<p>同时可以使用<code>git config --list</code>指令查看Git的配置信息。</p>
+<p><strong>配置Deployment</strong></p>
+<p>在博客文件夹内，打开_config.yml文件，拉到文件最下面，找到<code># Deployment</code>，修改信息如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"># Deployment</div><div class="line">## Docs: https://hexo.io/docs/deployment.html</div><div class="line">deploy:</div><div class="line"></div><div class="line">     type: git</div><div class="line"></div><div class="line">     repo: https://github.com/KinWah/KinWah.github.io.git #主要修改这个地址为你自己的地址</div><div class="line"></div><div class="line">     branch: master</div></pre></td></tr></table></figure>
+<p><strong>把本地博客上传提交到Github上</strong></p>
+<p>这里就涉及到Hexo常见的几个操作了：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">hexo clean 	#删除旧的 public 文件</div><div class="line">hexo g 		#新建新的 public 文件</div><div class="line">hexo d 		#开始部署</div><div class="line">可以集合起来：</div><div class="line">hexo clean</div><div class="line">hexo d -g</div></pre></td></tr></table></figure>
+<p>当你部署完毕之后，在浏览器里面输入你的Github地址：<a href="http://KinWah.github.io" target="_blank" rel="external">http://KinWah.github.io</a>（用户名改成你的）<br>，</p>
+<p>你能看到你网站显示出来的时候，Hexo + Github Pages就已经基本配置完成了。</p>
 <hr>
 <h2 id="关联解析到个人域名"><a href="#关联解析到个人域名" class="headerlink" title="关联解析到个人域名"></a><font color="#3f51b5">关联解析到个人域名</font></h2><h2 id="Hexo-常用操作"><a href="#Hexo-常用操作" class="headerlink" title="Hexo 常用操作"></a><font color="#3f51b5">Hexo 常用操作</font></h2><h2 id="Hexo-主题美化和性能优化"><a href="#Hexo-主题美化和性能优化" class="headerlink" title="Hexo 主题美化和性能优化"></a><font color="#3f51b5">Hexo 主题美化和性能优化</font></h2><h2 id="学习并适应如何用-Markdown-写文章"><a href="#学习并适应如何用-Markdown-写文章" class="headerlink" title="学习并适应如何用 Markdown 写文章"></a><font color="#3f51b5">学习并适应如何用 Markdown 写文章</font></h2><h2 id="还看什么别人的博客？赶紧动手去搭建自己的博客去！"><a href="#还看什么别人的博客？赶紧动手去搭建自己的博客去！" class="headerlink" title="还看什么别人的博客？赶紧动手去搭建自己的博客去！"></a><font color="#3f51b5">还看什么别人的博客？赶紧动手去搭建自己的博客去！</font></h2><p><img src="htt://ovl5r0omj.bkt.clouddn.com//17-9-1/58517498.jpg" alt=""></p>
 ]]></content>

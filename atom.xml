@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://KinWah.top/"/>
-  <updated>2017-09-01T16:21:41.000Z</updated>
+  <updated>2017-09-01T18:17:52.000Z</updated>
   <id>http://KinWah.top/</id>
   
   <author>
@@ -17,13 +17,14 @@
   
   <entry>
     <title>动手吧，用Hexo+Github搭建个人博客</title>
-    <link href="http://KinWah.top//blog/%E7%94%A8hexo+github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html"/>
-    <id>http://KinWah.top//blog/用hexo+github搭建个人博客.html</id>
+    <link href="http://KinWah.top//blog/%E5%8A%A8%E6%89%8B%E5%90%A7%EF%BC%8C%E7%94%A8Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html"/>
+    <id>http://KinWah.top//blog/动手吧，用Hexo+Github搭建个人博客.html</id>
     <published>2017-08-25T16:50:43.000Z</published>
-    <updated>2017-09-01T16:21:41.000Z</updated>
+    <updated>2017-09-01T18:17:52.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p>前言：学习前端也有好些日子了，看到知乎或者掘金等平台上的前端大神们都有自己的私人博客，想起以前经常混迹的网易博客，突然萌发了搭建一个私人博客的想法。当然，写博客不是为了写而写，更多的是记录自己的学习和思维轨迹，同时也算是一个回顾和反思的地方。不是为了更多人能看到，而是为了让自己的思想灵魂有个安放的居所，于是就有了这篇伪教程。</p>
+<p>前言：学习前端也有好些日子了，看到知乎或者掘金等平台上的前端大神们都有自己的私人博客，想起以前经常混迹的网易博客，突然萌发了搭建一个私人博客的想法。当然，写博客不是为了写而写，更多的是记录自己的学习和思维轨迹，同时也算是一个回顾和反思的地方，于是就有了这篇伪教程。</p>
+<p>——<em>不为谁而做的歌，不为谁而写的诗，不为谁而码的字，而为自己的思想灵魂有个安放的居所。</em></p>
 </blockquote>
 <p>趁着有空，参照了网上很多篇的教程，把自己用Hexo+Github搭建博客的过程记录了一番：</p>
 <p>我的博客地址：<a href="http://kinwah.top">http://kinwah.top</a><br><a id="more"></a></p>
@@ -36,12 +37,11 @@
 <li>关联 Hexo 和 Github Pages</li>
 <li>关联解析到个人域名</li>
 <li>Hexo 常用操作</li>
-<li>Hexo 主题美化和性能优化</li>
-<li>学习并适应如何用 Markdown 写文章</li>
+<li>学习并适应用 Markdown 写文章</li>
 <li>还看什么别人的博客？赶紧动手去搭建自己的博客去！</li>
 </ol>
 <blockquote>
-<p>本教程适用于MacOS，如果是Win系统下，相似的操作和命令行是可以参考借鉴的，macOS下的终端，Win下就是命令行cmd。</p>
+<p>本教程适用于MacOS，如果是Win系统下大同小异，相似的操作和命令行是可以参考借鉴的，macOS下的终端，Win下就是命令行cmd。</p>
 </blockquote>
 <hr>
 <h2 id="本地搭建-Node-js-环境"><a href="#本地搭建-Node-js-环境" class="headerlink" title="本地搭建 Node.js 环境"></a><font color="#3f51b5">本地搭建 Node.js 环境</font></h2><blockquote>
@@ -188,20 +188,119 @@
 <h1 id="Automatically-Excerpt-Not-recommend"><a href="#Automatically-Excerpt-Not-recommend" class="headerlink" title="Automatically Excerpt. Not recommend."></a>Automatically Excerpt. Not recommend.</h1><h1 id="Please-use-in-the-post-to-control-excerpt-accurately"><a href="#Please-use-in-the-post-to-control-excerpt-accurately" class="headerlink" title="Please use  in the post to control excerpt accurately."></a>Please use <!-- more --> in the post to control excerpt accurately.</h1><p>auto_excerpt:<br>  enable: true #修改这里<br>  length: 150  #在列表里，最多可显示的字数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">**更改主题**</div><div class="line"></div><div class="line">Hexo官方的主题库：[https://hexo.io/themes/](https://hexo.io/themes/)</div><div class="line"></div><div class="line">Hexo的流行程度，也让它的相关插件和主题都有非常多的选择，我现在只用了最为大家所推荐的`Next`主题，</div><div class="line"></div><div class="line">`Next`主题的官方文档：[http://theme-next.iissnan.com/](http://theme-next.iissnan.com/)</div><div class="line">```精于心，简于形</div></pre></td></tr></table></figure></p>
 <p>全中文的放心阅读，好好看一下，非常简单易懂，5分钟就能搞定。</p>
 <p><img src="http://ovl5r0omj.bkt.clouddn.com//17-9-2/64723002.jpg" alt=""></p>
+<p><strong>Next 主题美化和性能优化</strong></p>
+<blockquote>
+<p>由于我用的是<code>Next</code>主题，所以这里的美化和优化主要围绕<code>Next</code>主题。</p>
+</blockquote>
+<p>参考教程：<a href="http://www.jianshu.com/p/f054333ac9e6" target="_blank" rel="external">http://www.jianshu.com/p/f054333ac9e6</a></p>
+<p>这个教程里有三十种常见的炫酷效果，实在太多了，就不一一在列表里列举了，</p>
+<p>推荐几个比较常见的：</p>
+<p><code>添加RSS</code>、<code>添加动态背景</code>、<code>侧边栏社交小图标设置</code>、<code>在网站底部加上访问量</code>、<code>设置网站的图标Favicon</code>、<code>实现统计功能</code>。</p>
+<p>剩下的，大家看自己需求，参考教程添加就好。每次修改好主题，都可以使用<code>hexo s</code>本地预览观看，再决定是否部署。</p>
+<p><strong>如何更改内容区域的宽度？</strong></p>
+<p>这是一个比较常见的问题，貌似很多人都迫切想解决，博客的主题左右留白太多，想让内容充实一点，不要太多空白。</p>
+<p><code>Next</code>主题集成了三种样式，修改方式如下：</p>
+<ol>
+<li>编辑主题的 <code>next/source/css/_variables/custom.styl</code> 文件，新增变量：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// 修改成你期望的宽度</div><div class="line">$content-desktop = 700px</div><div class="line"></div><div class="line">// 当视窗超过 1600px 后的宽度</div><div class="line">$content-desktop-large = 900px</div></pre></td></tr></table></figure>
+<ol>
+<li>如果是<code>Pisces Scheme</code>风格，需要同时修改<code>header</code>的宽度、<code>.main-inner</code>的宽度以及<code>.content-wrap</code>的宽度。编辑主题的<code>next/source/css/_schemes/Pisces/_layout.styl</code>文件，新增变量：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// 用百分比设置，可以更好的适配不同的屏幕大小</div><div class="line">.header&#123; width: 80%; &#125; /* 80% */</div><div class="line">.container .main-inner &#123; width: 80%; &#125; /* 80% */</div><div class="line">.content-wrap &#123; width: calc(100% - 260px); &#125;</div></pre></td></tr></table></figure>
+<p>另外，开了背景动画的朋友，如果觉得网站打开速度太慢，不妨试着关闭掉它来提高整体访问速度，放读者更舒心：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Canvas-nest</div><div class="line">canvas_nest: false</div><div class="line"></div><div class="line"># three_waves</div><div class="line">three_waves: false</div></pre></td></tr></table></figure>
 <blockquote>
 <p>其实还有很多更细节的操作和使用技巧，这里就不一一列举了，大家可以使用过程中慢慢发现！</p>
 </blockquote>
 <hr>
-<h2 id="Hexo-主题美化和性能优化"><a href="#Hexo-主题美化和性能优化" class="headerlink" title="Hexo 主题美化和性能优化"></a><font color="#3f51b5">Hexo 主题美化和性能优化</font></h2><blockquote>
-<p>由于我用的是<code>Next</code>主题，所以这里的美化和优化主要围绕<code>Next</code>主题展开。</p>
+<h2 id="学习并适应用-Markdown-写文章"><a href="#学习并适应用-Markdown-写文章" class="headerlink" title="学习并适应用 Markdown 写文章"></a><font color="#3f51b5">学习并适应用 Markdown 写文章</font></h2><blockquote>
+<p>Markdown 是一种轻量级的「标记语言」，它的优点很多，目前也被越来越多的写作爱好者，撰稿者广泛使用。看到这里请不要被「标记」、「语言」所迷惑，Markdown 的语法十分简单。常用的标记符号也不超过十个，这种相对于更为复杂的 HTML 标记语言来说，Markdown 可谓是十分轻量的，学习成本也不需要太多，且一旦熟悉这种语法规则，会有一劳永逸的效果。</p>
 </blockquote>
-<h2 id="学习并适应如何用-Markdown-写文章"><a href="#学习并适应如何用-Markdown-写文章" class="headerlink" title="学习并适应如何用 Markdown 写文章"></a><font color="#3f51b5">学习并适应如何用 Markdown 写文章</font></h2><h2 id="还看什么别人的博客？赶紧动手去搭建自己的博客去！"><a href="#还看什么别人的博客？赶紧动手去搭建自己的博客去！" class="headerlink" title="还看什么别人的博客？赶紧动手去搭建自己的博客去！"></a><font color="#3f51b5">还看什么别人的博客？赶紧动手去搭建自己的博客去！</font></h2><p><img src="htt://ovl5r0omj.bkt.clouddn.com//17-9-1/58517498.jpg" alt=""></p>
+<p><img src="http://ovl5r0omj.bkt.clouddn.com//17-9-2/35335342.jpg" alt=""></p>
+<p><strong>使用Markdown的优点：</strong></p>
+<ul>
+<li>专注你的文字内容而不是排版样式，安心写作。</li>
+<li>轻松的到处HTML、PDF和本身的.md文件。</li>
+<li>纯文本内容，兼容所有的文本编辑器与字处理软件。</li>
+<li>随时修改你的文章版本，不必像字处理软件生成若干文件版本导致混乱。</li>
+<li>可读、直观、学习成本低。</li>
+</ul>
+<p><strong>使用 Markdown 的误区</strong> </p>
+<blockquote>
+<p>We believe that writing is about content, about what you want to say – not about fancy formatting. </p>
+<p>我们坚信写作写的是内容，所思所想，而不是花样格式。</p>
+<p>— Ulysses for Mac</p>
+</blockquote>
+<p><strong>工具的选择</strong></p>
+<p>更多的，Markdown是macOS用户用的比较多，所以macOS上的软件会比Win下全面很多。下面列举一下两个系统下推荐的软件：</p>
+<ol>
+<li>macOS：（只说我觉得比较好用和推荐的）<ul>
+<li>Mou</li>
+<li>MacDown（我正在用）</li>
+<li>Ulysses for Mac</li>
+</ul>
+</li>
+<li>Win：（这方面涉猎不深，只知道这两个）<ul>
+<li>MarkdownPad</li>
+<li>MarkPad</li>
+</ul>
+</li>
+<li>Web端：<ul>
+<li>简书：<a href="http://www.jianshu.com/" target="_blank" rel="external">http://www.jianshu.com/</a></li>
+<li>马克飞象：<a href="https://maxiang.io" target="_blank" rel="external">https://maxiang.io</a></li>
+<li>作业部落：<a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">https://www.zybuluo.com/mdeditor</a></li>
+</ul>
+</li>
+</ol>
+<p><strong>基本语法和操作</strong></p>
+<p>一般下载完软件，都会有个官方文档，里面会有很详尽的基本语法操作，跟着敲一遍基本就能熟悉了解了。</p>
+<p>基本就是：</p>
+<p><code>标题（#）</code>、<code>列表（-，*，1.）</code>、<code>引用（&gt;）</code>、<code>图片（&#39;![](){ImgCap}{/ImgCap}&#39;）</code>、</p>
+<p><code>链接（&#39;[]()&#39;）</code>、<code>分割线（***）</code>、<code>代码框（Tab）</code>、<code>粗体与斜体（**粗体**/*斜体*）</code></p>
+<p>想要更详细的参考推荐，可以看看这个教程：<a href="http://www.jianshu.com/p/1e402922ee32/" target="_blank" rel="external">http://www.jianshu.com/p/1e402922ee32/</a></p>
+<p><strong>图床选择</strong></p>
+<p>关于博客里面的图床问题，以前写论坛文章的时候，一般都是传到论坛里面，现在自己写博客，还真的为外链图片发愁好久。最后找了好久，终于找到了我觉得很不错的方案：<a href="https://jiantuku.com/#/" target="_blank" rel="external">七牛空间 &amp; 极简图床 &amp; chrome插件</a>，搭配使用。新人注册，七牛云有10G免费空间，每个月10G流量，存放我们博客里面的小截图，绰绰有余啦，最重要是极简图床搭配使用真的很高效，直接拖拽生成Markdown链接，然后粘贴到文章里面就好，方便快捷！！</p>
+<p><em>私以为，Markdown是最适合前端使用写作工具，可以结合HTML标记语言进行写作，还可以添加样式，赏心悦目，所见所得才是他最大的优势。我也算是第一次用Markdown来写文字，算是一边学习，一边写作的状态。还有很多语法需要去熟悉，不过通过写这篇文章，基本也把一些日常常用的语法熟悉了一遍。</em></p>
+<blockquote>
+<p>写完这篇文章，别问我经历了什么，只有一个<code>捂脸</code>表情包!</p>
+</blockquote>
+<hr>
+<h2 id="还看什么别人的博客？赶紧动手去搭建自己的博客去！"><a href="#还看什么别人的博客？赶紧动手去搭建自己的博客去！" class="headerlink" title="还看什么别人的博客？赶紧动手去搭建自己的博客去！"></a><font color="#3f51b5">还看什么别人的博客？赶紧动手去搭建自己的博客去！</font></h2><blockquote>
+<p>有时候，你不尝试，还真不知道自己行不行。</p>
+</blockquote>
+<p>关于为什么用Hexo+Github建站，其实还有很多建站系统供我们使用，如：<code>WordPress+服务器</code>、<code>Github+jekyll</code>、<code>......</code>。</p>
+<p>当然，Hexo + Github Pages 有优点也有缺点：</p>
+<p><strong>优点</strong></p>
+<ul>
+<li>轻量、高效</li>
+<li>部署方便、降低建站成本</li>
+<li>无需服务器，Github自带300M空间</li>
+<li>用Markdown编写文章</li>
+</ul>
+<p><strong>缺点</strong></p>
+<ul>
+<li>静态博客，没有数据库管理内容</li>
+<li>需用第三方评论工具</li>
+<li>入手简单，上手不易，没一定代码基础没办法深入修改 </li>
+</ul>
+<p>或许初衷就和很多人一样，因为它：<strong>简单高效，实用可靠</strong>。</p>
+<hr>
+<p>学习前端这么久了，一直嚷着要建个博客来记录自己的学习轨迹（其实就是装装），时间一天一天过，想过的却没去做；拖拖拉拉这么久，总算是建了个站，花了半天时间整理和回顾，写出来了第一篇文章，总算是给自己一个交代了。文章虽然不完美，但也算完整，是一个好的开始，什么事都应该有始有终，愿坚持创作，记录每一个开始，好让我能回顾每一个终止。</p>
+<blockquote>
+<p>不为谁而做的歌，不为谁而写的诗，不为谁而码的字，而为自己的思想灵魂有个安放的居所。</p>
+</blockquote>
+<p><strong>如果你有用心，相信你也可以。</strong></p>
+<font color="#ff4081">动起来，记录指尖，敲击之美。</font>
+
+<p><img src="http://ovl5r0omj.bkt.clouddn.com//17-9-1/58517498.jpg" alt=""></p>
 ]]></content>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;前言：学习前端也有好些日子了，看到知乎或者掘金等平台上的前端大神们都有自己的私人博客，想起以前经常混迹的网易博客，突然萌发了搭建一个私人博客的想法。当然，写博客不是为了写而写，更多的是记录自己的学习和思维轨迹，同时也算是一个回顾和反思的地方。不是为了更多人能看到，而是为了让自己的思想灵魂有个安放的居所，于是就有了这篇伪教程。&lt;/p&gt;
+&lt;p&gt;前言：学习前端也有好些日子了，看到知乎或者掘金等平台上的前端大神们都有自己的私人博客，想起以前经常混迹的网易博客，突然萌发了搭建一个私人博客的想法。当然，写博客不是为了写而写，更多的是记录自己的学习和思维轨迹，同时也算是一个回顾和反思的地方，于是就有了这篇伪教程。&lt;/p&gt;
+&lt;p&gt;——&lt;em&gt;不为谁而做的歌，不为谁而写的诗，不为谁而码的字，而为自己的思想灵魂有个安放的居所。&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;趁着有空，参照了网上很多篇的教程，把自己用Hexo+Github搭建博客的过程记录了一番：&lt;/p&gt;
 &lt;p&gt;我的博客地址：&lt;a href=&quot;http://kinwah.top&quot;&gt;http://kinwah.top&lt;/a&gt;&lt;br&gt;

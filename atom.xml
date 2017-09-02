@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://KinWah.top/"/>
-  <updated>2017-09-01T18:32:34.000Z</updated>
+  <updated>2017-09-02T02:22:48.000Z</updated>
   <id>http://KinWah.top/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://KinWah.top//blog/%E5%8A%A8%E6%89%8B%E5%90%A7%EF%BC%8C%E7%94%A8Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html"/>
     <id>http://KinWah.top//blog/动手吧，用Hexo+Github搭建个人博客.html</id>
     <published>2017-08-25T16:50:43.000Z</published>
-    <updated>2017-09-01T18:32:34.000Z</updated>
+    <updated>2017-09-02T02:22:48.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>前言：学习前端也有好些日子了，看到知乎或者掘金等平台上的前端大神们都有自己的私人博客，想起以前经常混迹的网易博客，突然萌发了搭建一个私人博客的想法。当然，写博客不是为了写而写，更多的是记录自己的学习和思维轨迹，同时也算是一个回顾和反思的地方，于是就有了这篇伪教程。</p>
@@ -192,7 +192,7 @@
 <p>下面，主要列举一些Hexo的常用指令和操作，让你的指尖之旅更加愉悦高效。</p>
 </blockquote>
 <p><strong>发表文章</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;标题&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;标题&quot;	#发表新文章</div></pre></td></tr></table></figure>
 <p>可以在博客更目录下：<code>source\_posts</code>文件夹里看到自己建立的<code>标题.md</code>的Markdown文件，点击进去可以进行你的内容创造。</p>
 <p>除此之外，还可以直接在<code>source\_posts</code>文件夹里直接创建新的Markdown文件，效果也是差不多的。</p>
 <p>编辑好文章好，就是常用的操作了，这个操作几乎是你每次写完文章的必备指令：</p>
@@ -201,7 +201,7 @@
 <p>进入自己博客首页的时候，博文不想全文显示的时候，可以添加<code>&lt;!-- more --&gt;</code>指令，在你想显示的文本最后添加这条指令，后面全部内容将会隐藏起来，然后博文列表里会出现<code>阅读全文</code>的字样。</p>
 <p>除了这个人为可控的办法外，还有一个自动隐藏的办法，前提是你添加了集成该功能的主题配置文件如（NexT），</p>
 <p>在相关主题配置文件<code>_config.yml</code>里，找到这段代码，把<code>enable: false</code>改成<code>enable: true</code>（注意冒号后面一定要空格）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Automatically Excerpt. Not recommend.</div><div class="line"># Please use &lt;!-- more --&gt; in the post to control excerpt</div><div class="line">accurately.</div><div class="line">auto_excerpt:</div><div class="line">	enable: true #修改这里</div><div class="line">length: 150  #在列表里，最多可显示的字数</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Automatically Excerpt. Not recommend.</div><div class="line"># Please use &lt;!-- more --&gt; in the post to control excerpt accurately.</div><div class="line">auto_excerpt:</div><div class="line">enable: true #修改这里</div><div class="line">length: 150  #在列表里，最多可显示的字数</div></pre></td></tr></table></figure>
 <p><strong>更改主题</strong></p>
 <p>Hexo官方的主题库：<a href="https://hexo.io/themes/" target="_blank" rel="external">https://hexo.io/themes/</a></p>
 <p>Hexo的流行程度，也让它的相关插件和主题都有非常多的选择，我现在只用了最为大家所推荐的<code>Next</code>主题，</p>
@@ -228,7 +228,7 @@
 <li>如果是<code>Pisces Scheme</code>风格，需要同时修改<code>header</code>的宽度、<code>.main-inner</code>的宽度以及<code>.content-wrap</code>的宽度。编辑主题的<code>next/source/css/_schemes/Pisces/_layout.styl</code>文件，新增变量：</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// 用百分比设置，可以更好的适配不同的屏幕大小</div><div class="line">.header&#123; width: 80%; &#125; /* 80% */</div><div class="line">.container .main-inner &#123; width: 80%; &#125; /* 80% */</div><div class="line">.content-wrap &#123; width: calc(100% - 260px); &#125;</div></pre></td></tr></table></figure>
-<p>另外，开了背景动画的朋友，如果觉得网站打开速度太慢，不妨试着关闭掉它来提高整体访问速度，放读者更舒心：</p>
+<p>另外，开了背景动画的朋友，如果觉得网站打开速度太慢，不妨试着关闭掉它来提高整体访问速度，让读者更舒心：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Canvas-nest</div><div class="line">canvas_nest: false</div><div class="line"></div><div class="line"># three_waves</div><div class="line">three_waves: false</div></pre></td></tr></table></figure>
 <blockquote>
 <p>其实还有很多更细节的操作和使用技巧，这里就不一一列举了，大家可以使用过程中慢慢发现！</p>

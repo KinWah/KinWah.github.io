@@ -112,13 +112,14 @@
 <meta property="og:site_name" content="KinWah&#39;s Blog">
 <meta property="og:description" content="前言：最近好好看了一遍JavaScript的基础，总结回顾了相关的知识点。通过博客文章，好好把看过的内容记录下来。 ——JS-Web-API">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ovl5r0omj.bkt.clouddn.com//17-10-12/32987972.jpg">
 <meta property="og:image" content="http://ovl5r0omj.bkt.clouddn.com//17-10-12/60055401.jpg">
 <meta property="og:image" content="http://ovl5r0omj.bkt.clouddn.com//17-10-12/70043625.jpg">
-<meta property="og:updated_time" content="2017-10-18T17:05:05.000Z">
+<meta property="og:updated_time" content="2017-10-18T17:25:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS-Web-API">
 <meta name="twitter:description" content="前言：最近好好看了一遍JavaScript的基础，总结回顾了相关的知识点。通过博客文章，好好把看过的内容记录下来。 ——JS-Web-API">
-<meta name="twitter:image" content="http://ovl5r0omj.bkt.clouddn.com//17-10-12/60055401.jpg">
+<meta name="twitter:image" content="http://ovl5r0omj.bkt.clouddn.com//17-10-12/32987972.jpg">
 
 
 
@@ -503,34 +504,37 @@ bindEvent(a, &apos;click&apos;, function(e){
 });
 </code></pre></li>
 <li><p>事件冒泡：</p>
+<pre><code>function bindEvent(elem, type, fn){
+    elem.addEventListener(type, fn);
+}
+var p1 = document.getElementById(&apos;p1&apos;);
+var body = document.body;
+bindEvent(p1, &apos;click&apos;, function(e){
+    e.stopPropagation();    //阻止向上冒泡
+    alert(&apos;激活&apos;)；
+})
+bindEvent(body, &apos;click&apos;, function(e){
+    alert(&apos;取消&apos;)；
+})
+</code></pre></li>
+<li><p>事件冒泡流程：</p>
+<ul>
+<li>DOM树形结构</li>
+<li>事件冒泡</li>
+<li>阻止冒泡</li>
+<li>冒泡的应用        </li>
+</ul>
 </li>
+<li><p>完善的通用绑定事件函数：</p>
+<p>  <img src="http://ovl5r0omj.bkt.clouddn.com//17-10-12/32987972.jpg" alt="">        </p>
+</li>
+<li>无限下拉加载图片的页面，绑定事件<ul>
+<li>使用代理</li>
+<li>代理的两个优点：1、代码简洁；2、浏览器压力小，提高效率和性能</li>
 </ul>
 </li>
 </ul>
-<pre><code>        function bindEvent(elem, type, fn) {                          elem.addEventListener(type, fn);
-        }
-        var p1 = document.getElementById(&apos;p1&apos;);
-        var body = document.body;
-        bindEvent(p1, &apos;click&apos;, function(e) {
-            e.stopPropagation();// 阻止向上冒泡
-            alert(&apos;激活&apos;)
-        })
-        bindEvent(body, &apos;click&apos;, function(e) {
-            alert(&apos;取消&apos;)
-        })
-
-- 事件冒泡流程：
-    - DOM树形结构
-    - 事件冒泡
-    - 阻止冒泡
-    - 冒泡的应用        
-- 完善的通用绑定事件函数：
-
-    ![](http://ovl5r0omj.bkt.clouddn.com//17-10-12/32987972.jpg)        
-- 无限下拉加载图片的页面，绑定事件
-    - 使用代理
-    - 代理的两个优点：1、代码简洁；2、浏览器压力小，提高效率和性能
-</code></pre><ul>
+</li>
 <li><p><strong>Ajax</strong></p>
 <ul>
 <li>题目：<ul>

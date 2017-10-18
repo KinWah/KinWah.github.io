@@ -104,22 +104,22 @@
 
 
 
-<meta name="description" content="变量类型和计算 值类型 引用类型：对象、数组、函数 typeof 运算符： typeof undefined;    /undefined typeof &amp;apos;abc&amp;apos;;        /string typeof 123;            /number typeof true;        /boolean typeof [];            /object t">
+<meta name="description" content="前言：最近好好看了一遍JavaScript的基础，总结回顾了相关的知识点。通过博客文章，好好把看过的内容记录下来。 ——JavaScript基础知识–总汇">
 <meta name="keywords" content="JavaScript,基础,三座大山">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript基础知识--总汇">
 <meta property="og:url" content="http://KinWah.top/blog/JS面试题详解.html">
 <meta property="og:site_name" content="KinWah&#39;s Blog">
-<meta property="og:description" content="变量类型和计算 值类型 引用类型：对象、数组、函数 typeof 运算符： typeof undefined;    /undefined typeof &amp;apos;abc&amp;apos;;        /string typeof 123;            /number typeof true;        /boolean typeof [];            /object t">
+<meta property="og:description" content="前言：最近好好看了一遍JavaScript的基础，总结回顾了相关的知识点。通过博客文章，好好把看过的内容记录下来。 ——JavaScript基础知识–总汇">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ovl5r0omj.bkt.clouddn.com//17-9-13/39252999.jpg">
 <meta property="og:image" content="http://ovl5r0omj.bkt.clouddn.com//17-9-13/87481822.jpg">
 <meta property="og:image" content="http://ovl5r0omj.bkt.clouddn.com//17-10-12/60055401.jpg">
 <meta property="og:image" content="http://ovl5r0omj.bkt.clouddn.com//17-10-12/70043625.jpg">
-<meta property="og:updated_time" content="2017-10-18T16:33:50.000Z">
+<meta property="og:updated_time" content="2017-10-18T17:13:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript基础知识--总汇">
-<meta name="twitter:description" content="变量类型和计算 值类型 引用类型：对象、数组、函数 typeof 运算符： typeof undefined;    /undefined typeof &amp;apos;abc&amp;apos;;        /string typeof 123;            /number typeof true;        /boolean typeof [];            /object t">
+<meta name="twitter:description" content="前言：最近好好看了一遍JavaScript的基础，总结回顾了相关的知识点。通过博客文章，好好把看过的内容记录下来。 ——JavaScript基础知识–总汇">
 <meta name="twitter:image" content="http://ovl5r0omj.bkt.clouddn.com//17-9-13/39252999.jpg">
 
 
@@ -322,8 +322,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-02T22:15:34+08:00">
-                2017-09-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-01T22:15:34+08:00">
+                2017-09-01
               </time>
             
 
@@ -387,8 +387,28 @@
       
 
       
-        <h3 id="变量类型和计算"><a href="#变量类型和计算" class="headerlink" title="变量类型和计算"></a>变量类型和计算</h3><ul>
-<li>值类型</li>
+        <blockquote>
+<p>前言：最近好好看了一遍JavaScript的基础，总结回顾了相关的知识点。通过博客文章，好好把看过的内容记录下来。</p>
+<p>——JavaScript基础知识–总汇<br><a id="more"></a></p>
+</blockquote>
+<hr>
+<h1 id="JavaScript基础知识–总汇"><a href="#JavaScript基础知识–总汇" class="headerlink" title="JavaScript基础知识–总汇"></a><font color="#3f51b5">JavaScript基础知识–总汇</font></h1><h2 id="变量类型和计算"><a href="#变量类型和计算" class="headerlink" title="变量类型和计算"></a>变量类型和计算</h2><ul>
+<li>常见题目：<ul>
+<li>JS中使用typeof能得到哪些类型</li>
+<li>何时使用 === 何时使用 ==</li>
+<li>JS中有哪些内置函数</li>
+<li>JS变量按照<strong>存储方式</strong>区分为哪些类型，并描述其特点</li>
+<li>如何理解<code>JSON</code></li>
+</ul>
+</li>
+<li>知识点：<ul>
+<li>变量类型</li>
+<li>变量计算</li>
+</ul>
+</li>
+<li><p>变量类型：</p>
+<ul>
+<li>值类型：数值、布尔值、<code>null</code>、<code>undefined</code></li>
 <li>引用类型：对象、数组、函数</li>
 <li><p>typeof 运算符：</p>
 <pre><code>typeof undefined;    /undefined
@@ -400,10 +420,16 @@ tyoeof {};             /object
 typeof null;         /object
 typeof console.log; /function
 </code></pre></li>
-<li><p>变量计算：</p>
-<pre><code>待定
-</code></pre></li>
-<li><p>问题：何时使用 === 何时使用==</p>
+</ul>
+</li>
+<li>变量计算——强制类型转换<ul>
+<li>字符串拼接</li>
+<li><code>==</code>运算符</li>
+<li>if语句</li>
+<li>逻辑运算</li>
+</ul>
+</li>
+<li><p>何时使用 <code>===</code>；何时使用<code>==</code></p>
 <pre><code>if (obj.a == null) {
     //这里相当于obj.a === null || obj.a === undefined 简写形式
     //这里jquery 码源推荐的写法
@@ -420,7 +446,21 @@ JSON.parse(&apos;{&quot;a&quot;:10,&quot;b&quot;:20}&apos;);    /字符串转对
 </code></pre></li>
 </ul>
 <hr>
-<h3 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h3><ul>
+<h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><ul>
+<li>常见题目：<ul>
+<li>如何准确判断一个变量是数组类型</li>
+<li>写一个原型链继承的例子</li>
+<li>描述new一个对象的过程</li>
+<li>各种框架源码中如何使用原型链</li>
+</ul>
+</li>
+<li>知识点：<ul>
+<li>构造函数</li>
+<li>构造函数-扩展</li>
+<li>原型规则和示例</li>
+<li>原型链</li>
+</ul>
+</li>
 <li><p>构造函数</p>
 <pre><code>function Foo(name, age) {
     this.name = name;
@@ -524,8 +564,16 @@ div1.on(&apos;click&apos;,function () {
 </li>
 </ul>
 <hr>
-<h3 id="作用域和闭包"><a href="#作用域和闭包" class="headerlink" title="作用域和闭包"></a>作用域和闭包</h3><ul>
-<li>知识点总结<ul>
+<h2 id="作用域和闭包"><a href="#作用域和闭包" class="headerlink" title="作用域和闭包"></a>作用域和闭包</h2><ul>
+<li>常见题目：<ul>
+<li>说一下对变量提升的理解</li>
+<li>说明this几种不同的使用场景</li>
+<li>创建10个<code>&lt;a&gt;</code>标签，点击的时候弹出对应的序号</li>
+<li>如何理解作用域</li>
+<li>实际开发中闭包的应用</li>
+</ul>
+</li>
+<li>知识点：<ul>
 <li>执行上下文</li>
 <li>this</li>
 <li>作用域</li>
@@ -619,6 +667,8 @@ function fn(){
 console.log(&apos;global&apos;,a);
 fn();
 </code></pre></li>
+</ul>
+</li>
 <li><p>作用域链</p>
 <pre><code>var a = 100;
 function fn(){
@@ -643,8 +693,6 @@ function F1(){
 }
 F1();
 </code></pre></li>
-</ul>
-</li>
 <li><p>闭包及其使用场景</p>
 <ul>
 <li><p>函数作为返回值（示例）</p>
@@ -702,8 +750,14 @@ firstLoad(20);    // false
 </code></pre></li>
 </ul>
 <hr>
-<h3 id="异步和单线程"><a href="#异步和单线程" class="headerlink" title="异步和单线程"></a>异步和单线程</h3><ul>
-<li>知识点总结<ul>
+<h2 id="异步和单线程"><a href="#异步和单线程" class="headerlink" title="异步和单线程"></a>异步和单线程</h2><ul>
+<li>常见题目：<ul>
+<li>同步和异步的区别是什么？分别举一个同步和异步的例子</li>
+<li>一个关于setTimeout的笔试题</li>
+<li>前端使用异步的场景有哪些？</li>
+</ul>
+</li>
+<li>知识点：<ul>
 <li>什么是异步（对比同步）</li>
 <li>前端使用异步的场景</li>
 <li>异步和单线程</li>
@@ -778,7 +832,7 @@ console.log(300);
 </ul>
 </li>
 </ul>
-<h3 id="JavaScript基础知识补充"><a href="#JavaScript基础知识补充" class="headerlink" title="JavaScript基础知识补充"></a>JavaScript基础知识补充</h3><ul>
+<h2 id="JavaScript基础知识补充"><a href="#JavaScript基础知识补充" class="headerlink" title="JavaScript基础知识补充"></a>JavaScript基础知识补充</h2><ul>
 <li>题目：<ul>
 <li>获取2017-06-10格式的日期</li>
 <li>获取随机数，要求是长度一致的字符串格式</li>
@@ -789,7 +843,7 @@ console.log(300);
 <li>日期、Math、数组API、对象API</li>
 </ul>
 </li>
-<li><p>日期</p>
+<li><p>日期：</p>
 <pre><code>Date.now(); // 获取当前时间毫秒数
 var dt = new Date();
 dt.getTime(); // 获取毫秒数
@@ -932,7 +986,7 @@ var obj = {x:100,y:200};
 forEach(obj, function(key, value){
     console.log(key,value)
 });
-</code></pre><h3 id="JS-Web-API"><a href="#JS-Web-API" class="headerlink" title="JS-Web-API"></a>JS-Web-API</h3></li>
+</code></pre><h2 id="JS-Web-API"><a href="#JS-Web-API" class="headerlink" title="JS-Web-API"></a>JS-Web-API</h2></li>
 <li>常说的JS包含两部分：<ul>
 <li>1、JS基础知识（ECMA262标准）</li>
 <li>2、JS-Web-API（W3C标准）</li>
@@ -1156,7 +1210,7 @@ xhr.send(null);
 </ul>
 </li>
 </ul>
-<h3 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h3><ul>
+<h2 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h2><ul>
 <li>知识点:<ul>
 <li>不使用模块化的情况</li>
 <li>使用模块化</li>
@@ -1331,7 +1385,7 @@ module.exports = {
 </ul>
 </li>
 </ul>
-<h3 id="运行环境"><a href="#运行环境" class="headerlink" title="运行环境"></a>运行环境</h3><ul>
+<h2 id="运行环境"><a href="#运行环境" class="headerlink" title="运行环境"></a>运行环境</h2><ul>
 <li>运行环境:<ul>
 <li>浏览器就可以通过访问链接来得到页面的内容</li>
 <li>通过绘制和渲染,显示出页面的最终样子</li>
@@ -1578,8 +1632,8 @@ textarea.addEventListener(&apos;keyup&apos;,function(){
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/JavaScript基础——作用域和闭包.html" rel="next" title="作用域和闭包">
-                <i class="fa fa-chevron-left"></i> 作用域和闭包
+              <a href="/blog/动手吧，用Hexo+Github搭建个人博客.html" rel="next" title="动手吧，用Hexo+Github搭建个人博客">
+                <i class="fa fa-chevron-left"></i> 动手吧，用Hexo+Github搭建个人博客
               </a>
             
           </div>
@@ -1587,6 +1641,10 @@ textarea.addEventListener(&apos;keyup&apos;,function(){
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/变量类型和计算.html" rel="prev" title="变量类型和计算">
+                变量类型和计算 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -1665,7 +1723,7 @@ textarea.addEventListener(&apos;keyup&apos;,function(){
             
               <a href="/archives">
             
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1831,7 +1889,7 @@ textarea.addEventListener(&apos;keyup&apos;,function(){
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#变量类型和计算"><span class="nav-number">1.</span> <span class="nav-text">变量类型和计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原型链"><span class="nav-number">2.</span> <span class="nav-text">原型链</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#作用域和闭包"><span class="nav-number">3.</span> <span class="nav-text">作用域和闭包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异步和单线程"><span class="nav-number">4.</span> <span class="nav-text">异步和单线程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript基础知识补充"><span class="nav-number">5.</span> <span class="nav-text">JavaScript基础知识补充</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JS-Web-API"><span class="nav-number">6.</span> <span class="nav-text">JS-Web-API</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模块化"><span class="nav-number">7.</span> <span class="nav-text">模块化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行环境"><span class="nav-number">8.</span> <span class="nav-text">运行环境</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript基础知识–总汇"><span class="nav-number">1.</span> <span class="nav-text">JavaScript基础知识–总汇</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#变量类型和计算"><span class="nav-number">1.1.</span> <span class="nav-text">变量类型和计算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原型链"><span class="nav-number">1.2.</span> <span class="nav-text">原型链</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#作用域和闭包"><span class="nav-number">1.3.</span> <span class="nav-text">作用域和闭包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异步和单线程"><span class="nav-number">1.4.</span> <span class="nav-text">异步和单线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript基础知识补充"><span class="nav-number">1.5.</span> <span class="nav-text">JavaScript基础知识补充</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JS-Web-API"><span class="nav-number">1.6.</span> <span class="nav-text">JS-Web-API</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模块化"><span class="nav-number">1.7.</span> <span class="nav-text">模块化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行环境"><span class="nav-number">1.8.</span> <span class="nav-text">运行环境</span></a></li></ol></li></ol></div>
             
 
           </div>

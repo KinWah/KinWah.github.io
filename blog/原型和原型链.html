@@ -86,7 +86,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JavaScript,基础,三座大山," />
 
 
 
@@ -104,16 +104,21 @@
 
 
 
-<meta name="description" content="蝉鸣知夏至 ✕ 叶落晓秋分">
-<meta property="og:type" content="website">
-<meta property="og:title" content="KinWah&#39;s Blog">
-<meta property="og:url" content="http://KinWah.top/archives/index.html">
+<meta name="description" content="前言：最近好好看了一遍JavaScript的基础，总结回顾了相关的知识点。通过博客文章，好好把看过的内容记录下来。 ——原型和原型链">
+<meta name="keywords" content="JavaScript,基础,三座大山">
+<meta property="og:type" content="article">
+<meta property="og:title" content="原型和原型链">
+<meta property="og:url" content="http://KinWah.top/blog/原型和原型链.html">
 <meta property="og:site_name" content="KinWah&#39;s Blog">
-<meta property="og:description" content="蝉鸣知夏至 ✕ 叶落晓秋分">
+<meta property="og:description" content="前言：最近好好看了一遍JavaScript的基础，总结回顾了相关的知识点。通过博客文章，好好把看过的内容记录下来。 ——原型和原型链">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ovl5r0omj.bkt.clouddn.com//17-9-13/39252999.jpg">
+<meta property="og:image" content="http://ovl5r0omj.bkt.clouddn.com//17-9-13/87481822.jpg">
+<meta property="og:updated_time" content="2017-10-18T16:52:08.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="KinWah&#39;s Blog">
-<meta name="twitter:description" content="蝉鸣知夏至 ✕ 叶落晓秋分">
+<meta name="twitter:title" content="原型和原型链">
+<meta name="twitter:description" content="前言：最近好好看了一遍JavaScript的基础，总结回顾了相关的知识点。通过博客文章，好好把看过的内容记录下来。 ——原型和原型链">
+<meta name="twitter:image" content="http://ovl5r0omj.bkt.clouddn.com//17-9-13/39252999.jpg">
 
 
 
@@ -143,13 +148,13 @@
 
 
 
-  <link rel="canonical" href="http://KinWah.top/archives/"/>
+  <link rel="canonical" href="http://KinWah.top/blog/原型和原型链.html"/>
 
 
 
 
 
-  <title>归档 | KinWah's Blog</title>
+  <title>原型和原型链 | KinWah's Blog</title>
   
 
 
@@ -168,7 +173,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -272,407 +277,313 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://KinWah.top/blog/原型和原型链.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="KinWah">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="KinWah's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">原型和原型链</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-02T00:50:43+08:00">
+                2017-09-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 10 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/总结/" itemprop="url" rel="index">
+                    <span itemprop="name">总结</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/blog/模块化.html" itemprop="url">
-              
-                <span itemprop="name">模块化</span>
-              
-            </a>
-        
-      </h2>
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-bolt"></i><span> 阅读<span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-03T23:42:12+08:00"
-              content="2017-09-03" >
-          09-03
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/blog/JS-Web-API.html" itemprop="url">
-              
-                <span itemprop="name">JS-Web-API</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-03T23:20:12+08:00"
-              content="2017-09-03" >
-          09-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
+      
+        <blockquote>
+<p>前言：最近好好看了一遍JavaScript的基础，总结回顾了相关的知识点。通过博客文章，好好把看过的内容记录下来。</p>
+<p>——原型和原型链<br><a id="more"></a></p>
+</blockquote>
+<hr>
+<h1 id="原型和原型链"><a href="#原型和原型链" class="headerlink" title="原型和原型链"></a><font color="#3f51b5">原型和原型链</font></h1><ul>
+<li>常见题目：<ul>
+<li>如何准确判断一个变量是数组类型</li>
+<li>写一个原型链继承的例子</li>
+<li>描述new一个对象的过程</li>
+<li>各种框架源码中如何使用原型链</li>
+</ul>
+</li>
+<li>知识点：<ul>
+<li>构造函数</li>
+<li>构造函数-扩展</li>
+<li>原型规则和示例</li>
+<li>原型链</li>
+</ul>
+</li>
+<li><p>构造函数</p>
+<pre><code>function Foo(name, age) {
+    this.name = name;
+    this.age = age;
+    this.class = &apos;class-1&apos;;
+    // return this; // 默认有这行
+    // Foo开头大写，默认认知就是构造函数
+    }
+var f = new Foo(&apos;zhangsan&apos;,20);
+// var fn1 = new Foo(&apos;list&apos;,22) //创建多个对象
+</code></pre></li>
+<li>构造函数-扩展<ul>
+<li>var = a {} 其实是 var a = new Object()的语法糖</li>
+<li>var = a [] 其实是 var a = new Array()的语法糖</li>
+<li>function Foo(){…} 其实是 var Foo = new Function(…)</li>
+<li>使用instanceof判断一个函数是否是一个变量的构造函数<ul>
+<li>判断一个变量是否为’数组’：变量 <code>instanceof Array</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>5个常见原型规则</p>
+<ol>
+<li><p>所有的引用类型（数组、对象、函数），都具有对象特性，即可自由扩展属性（除了”null”意外）</p>
+<pre><code>var obj = {}; obj.a = 100;
+var arr = []; arr.a = 100;
+function fn () {};
+fn.a = 100;
+</code></pre></li>
+<li><p>所有的引用类型（数组、对象、函数），都有一个<code>_proto_（隐式原型）</code>属性，属性值是一个普通的对象</p>
+<pre><code>console.log(obj.__proto__);
+console.log(arr.__proto__);
+consolo.log(fn.__proto__); 
+</code></pre></li>
+<li><p>所有的函数，都有一个<code>prototype（显式原型）</code>属性，属性值是一个普通的对象</p>
+<pre><code>console.log(fn.prototype);
+</code></pre></li>
+<li><p>所有的引用类型（数组、对象、函数），<code>__proto__（隐式原型）</code>属性值指向（完全等）它的构造函数的<code>prototype（显式原型）</code>属性值</p>
+<pre><code>console.log(obj.__proto__ === Object.prototype);
+</code></pre></li>
+<li><p>当试图得到一个对象的某个属性时，如果这个对象本身没有这个属性，那么会去它的<code>__proto__（隐式原型）</code>（既它的构造函数的<code>prototype（显式原型）</code>）中寻找</p>
+<pre><code>//构造函数
+funciton Foo(name,age) {
+    this.name = name;
+    }
+Foo.prototype.alertName = function () {
+    alert(this.name);
+    };
+//创建示例
+var f = new Foo(&apos;zhangsan&apos;);
+f.printName = function () {
+    console.log(this.name);
+    };
+//测试
+f.printName();
+f.alertName();
+f.toString(); //要去 f.__proto__.__proto___（下图所示）
+</code></pre><p><img src="http://ovl5r0omj.bkt.clouddn.com//17-9-13/39252999.jpg" alt=""><br><img src="http://ovl5r0omj.bkt.clouddn.com//17-9-13/87481822.jpg" alt=""></p>
+</li>
+</ol>
+</li>
+<li><p>规则的补充两点：</p>
+<pre><code>1、循环对象自身的属性——`f.hasOwnProperty()`
+2、this永远指向对象本身
+</code></pre></li>
+<li><p>原型链—instanceof</p>
+<ul>
+<li><code>f instanceof Foo</code> 的判断逻辑是：</li>
+<li><code>f</code> 的<code>__proto__</code>一层一层往上，能否对应到<code>Foo.prototype</code></li>
+<li>再试着判断<code>f instanceof Object</code></li>
+<li><p>原型链示例：</p>
+<pre><code>// 定义一个构造函数
+ function Elem(id) {
+     this.elem= document.getElementById(id);
+ }
+ // 扩展原型
+ Elem.prototype.html = function (val) {
+     var elem = this.elem;
+     if (val) {
+         elem.innerHTML = val;
+         return this; // 链式操作
+     } else {
+         return elem.innerHTML
+     }
+ };
+ // 扩展方法(事件绑定）
+ Elem.prototype.on = function (type, fn) {
+     var elem = this.elem;
+     elem.addEventListener(type, fn);
+ };
 
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/blog/JavaScript基础知识补充.html" itemprop="url">
-              
-                <span itemprop="name">JavaScript基础知识补充</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-03T22:10:12+08:00"
-              content="2017-09-03" >
-          09-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+ var div1 = new Elem(&apos;head&apos;);
+ console.log(div1.html());
+div1.html(&apos;&lt;p&gt;hello world&lt;/p&gt;&apos;);
+div1.on(&apos;click&apos;,function () {
+    alert(&apos;clicked&apos;)
+})    ;
+//以上是一个封装DOM查询的例子
+</code></pre></li>
+</ul>
+</li>
+</ul>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/blog/运行环境.html" itemprop="url">
-              
-                <span itemprop="name">运行环境</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-03T00:10:12+08:00"
-              content="2017-09-03" >
-          09-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/blog/异步和单线程.html" itemprop="url">
-              
-                <span itemprop="name">异步和单线程</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-02T01:20:20+08:00"
-              content="2017-09-02" >
-          09-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/blog/作用域和闭包.html" itemprop="url">
-              
-                <span itemprop="name">作用域和闭包</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-02T01:10:12+08:00"
-              content="2017-09-02" >
-          09-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/blog/原型和原型链.html" itemprop="url">
-              
-                <span itemprop="name">原型和原型链</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-02T00:50:43+08:00"
-              content="2017-09-02" >
-          09-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/blog/变量类型和计算.html" itemprop="url">
-              
-                <span itemprop="name">变量类型和计算</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-02T00:10:12+08:00"
-              content="2017-09-02" >
-          09-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/blog/JS面试题详解.html" itemprop="url">
-              
-                <span itemprop="name">JavaScript基础知识--总汇</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-01T22:15:34+08:00"
-              content="2017-09-01" >
-          09-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/blog/动手吧，用Hexo+Github搭建个人博客.html" itemprop="url">
-              
-                <span itemprop="name">动手吧，用Hexo+Github搭建个人博客</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-26T00:50:43+08:00"
-              content="2017-08-26" >
-          08-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+    <div>
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束 <i class="fa fa-bars"></i> 感谢阅读-------------</div>
+    
+</div>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
+          
+            <a href="/tags/基础/" rel="tag"><i class="fa fa-tag"></i> 基础</a>
+          
+            <a href="/tags/三座大山/" rel="tag"><i class="fa fa-tag"></i> 三座大山</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/变量类型和计算.html" rel="next" title="变量类型和计算">
+                <i class="fa fa-chevron-left"></i> 变量类型和计算
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/作用域和闭包.html" rel="prev" title="作用域和闭包">
+                作用域和闭包 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -680,6 +591,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -700,8 +615,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/2.jpg"
@@ -875,6 +799,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#原型和原型链"><span class="nav-number">1.</span> <span class="nav-text">原型和原型链</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -1020,11 +960,6 @@
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
 
 
   

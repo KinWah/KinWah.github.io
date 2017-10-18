@@ -1192,11 +1192,229 @@ textarea.addEventListener(&apos;keyup&apos;,function(){
   </entry>
   
   <entry>
-    <title>JavaScript基础知识——原型和原型链</title>
+    <title>作用域和闭包</title>
+    <link href="http://KinWah.top//blog/JavaScript%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E9%97%AD%E5%8C%85.html"/>
+    <id>http://KinWah.top//blog/JavaScript基础——作用域和闭包.html</id>
+    <published>2017-09-01T17:10:12.000Z</published>
+    <updated>2017-10-18T16:57:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>前言：最近好好看了一遍JavaScript的基础，总结回顾了相关的知识点。通过博客文章，好好把看过的内容记录下来。</p>
+<p>——作用域和闭包<br><a id="more"></a></p>
+</blockquote>
+<hr>
+<h1 id="作用域和闭包"><a href="#作用域和闭包" class="headerlink" title="作用域和闭包"></a><font color="#3f51b5">作用域和闭包</font></h1><ul>
+<li>常见题目：<ul>
+<li>说一下对变量提升的理解</li>
+<li>说明this几种不同的使用场景</li>
+<li>创建10个<code>&lt;a&gt;</code>标签，点击的时候弹出对应的序号</li>
+<li>如何理解作用域</li>
+<li>实际开发中闭包的应用</li>
+</ul>
+</li>
+<li>知识点：<ul>
+<li>执行上下文</li>
+<li>this</li>
+<li>作用域</li>
+<li>作用域链</li>
+<li>闭包</li>
+</ul>
+</li>
+<li><p>执行上下文</p>
+<ul>
+<li>范围：一段<code>&lt;script&gt;</code>或者一个函数（生成一个执行上下文）</li>
+<li>全局：变量定义、函数声明 （针对一段<code>&lt;script&gt;</code>，执行之前把其拿出来）</li>
+<li>函数：变量定义、函数声明、<code>this</code>、<code>*arguments</code> （针对一个函数执行之前）</li>
+<li><em>解释</em>：<code>arguments</code><ul>
+<li>使用特殊对象 arguments，开发者无需明确指出参数名</li>
+<li>用 arguments.length 检测函数的参数个数</li>
+<li>用 arguments 对象判断传递给函数的参数个数，可模拟函数重载</li>
+</ul>
+</li>
+<li><p>PS：注意函数表达式和函数声明的区别</p>
+<pre><code>function fn(){};     // 函数声明
+var fn = function(){};        // 函数表达式
+</code></pre></li>
+</ul>
+</li>
+<li><p>this</p>
+<ul>
+<li><p><code>this</code>要在执行时才能确认值，定义时无法确认</p>
+<pre><code>var a = {
+    name: &apos;A&apos;,
+    fn: function () {
+        console.log(this.name);
+    }
+};
+a.fn(); // this === a
+a.fn.call({name: &apos;B&apos;}); // this === {name: &apos;B&apos;}
+var fn1 = a.fn;
+fn1(); // this === window
+</code></pre></li>
+<li><p>作为构造函数执行</p>
+<pre><code>function Foo(name){
+    this.name = name;
+}
+var f = new Foo(&apos;KinW&apos;);
+</code></pre></li>
+<li><p>作为对象属性执行</p>
+<pre><code>var obj = {
+    name: &apos;A&apos;,
+    printName: function () {
+        console.log(this.name);
+    }
+obj.printName();
+</code></pre></li>
+<li><p>作为普通函数执行</p>
+<pre><code>function fn() {
+    console.log(this); // this === window    
+}
+</code></pre></li>
+<li><p><code>call（最常用）</code>、<code>apply</code>、<code>bind</code></p>
+<pre><code>function fn1(name) {
+    alert(name);
+    console.log(this);
+}
+fn1.call({x:100},&apos;KinW&apos;,20);
+fn1.apply({x:100},[&apos;KinW&apos;,20]);
+
+var fn2 =function (name,age)
+{
+    alert(name);
+    console.log(this);
+}.bind({y:200})
+fn2(&apos;KinW&apos;,20)
+</code></pre></li>
+</ul>
+</li>
+<li><p>作用域</p>
+<ul>
+<li><p>JavaScript中没有块级作用域（不要在块内声明变量，不易读）</p>
+<pre><code>// 无块级作用域
+if (true){
+    var name = &apos;KinW&apos;;
+}
+console.log(name); // 可以读取块内变量
+</code></pre></li>
+<li><p>只有函数和全局作用域</p>
+<pre><code>// 函数和全局作用域
+var a = 100;
+function fn(){
+    var a = 200;
+    console.log(&apos;fn&apos;,a);
+}
+console.log(&apos;global&apos;,a);
+fn();
+</code></pre></li>
+</ul>
+</li>
+<li><p>作用域链</p>
+<pre><code>var a = 100;
+function fn(){
+    var b = 200;
+
+    // 当前作用域没有定义的变量，即“自由变量”
+    console.log(a); // 函数的父级作用域 -&gt; 全局作用域
+    console.log(b);
+}
+fn();
+
+var a =100;
+function F1(){
+    var b = 200;
+    function F2(){
+        var c = 300;
+        console.log(a); // a 是自由变量
+        console.log(b); // b 是自由变量
+        console.log(c);
+    }    
+    F2();
+}
+F1();
+</code></pre></li>
+<li><p>闭包及其使用场景</p>
+<ul>
+<li><p>函数作为返回值（示例）</p>
+<pre><code>function F1(){
+    var a = 100;
+    // 返回一个函数（函数作为返回值）
+    return function (){
+        console.log(a); // 自由变量，父作用域寻找
+    };
+}
+// f1 得到一个函数
+var f1 = F1(); // 返回一个函数
+var a = 200;
+f1(); // a = 100，次级作用域是对其进行定义的作用域F1）
+</code></pre></li>
+<li><p>函数作为参数传递（示例）</p>
+<pre><code>function F1(){
+    var a = 100;
+    // 返回一个函数（函数作为返回值）
+    return function(){
+        console.log(a);    // 自由变量，父作用域寻找
+    };
+}
+// f1 得到一个函数
+var f1 = F1(); // 返回一个函数
+function F2(fn){
+    var a = 200;
+    fn();
+}
+F2(f1); // a = 100，把f1带入F2中执行
+</code></pre></li>
+</ul>
+</li>
+<li><p>实际开发中闭包的应用：封装变量，收敛权限</p>
+<pre><code>// 闭包实际应用中，主要用于封装变量，收敛权限
+function isFirstLoad(){
+    var _list = []; // 下划线，这个变量是私有的
+    return function(id){
+        if(_list.indexOf(id)&gt;=0){
+            return false;
+        }else{
+            _list.push(id);
+            return true;
+        }
+    };
+}
+
+// 使用
+var firstLoad = isFristLoad();
+firstLoad(10);    //    true
+firstLoad(10);    //    false
+firstLoad(20);    //    true
+firstLoad(20);    // false
+// 你在 isFirstLoad 函数外面，根本不可能修改掉`_list`的值
+</code></pre></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;前言：最近好好看了一遍JavaScript的基础，总结回顾了相关的知识点。通过博客文章，好好把看过的内容记录下来。&lt;/p&gt;
+&lt;p&gt;——作用域和闭包&lt;br&gt;
+    
+    </summary>
+    
+      <category term="总结" scheme="http://KinWah.top/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="JavaScript" scheme="http://KinWah.top/tags/JavaScript/"/>
+    
+      <category term="基础" scheme="http://KinWah.top/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="三座大山" scheme="http://KinWah.top/tags/%E4%B8%89%E5%BA%A7%E5%A4%A7%E5%B1%B1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>原型和原型链</title>
     <link href="http://KinWah.top//blog/JavaScript%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E2%80%94%E2%80%94%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE.html"/>
     <id>http://KinWah.top//blog/JavaScript基础知识——原型和原型链.html</id>
     <published>2017-09-01T16:50:43.000Z</published>
-    <updated>2017-10-18T16:39:12.000Z</updated>
+    <updated>2017-10-18T16:52:08.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>前言：最近好好看了一遍JavaScript的基础，总结回顾了相关的知识点。通过博客文章，好好把看过的内容记录下来。</p>
@@ -1342,11 +1560,11 @@ div1.on(&apos;click&apos;,function () {
   </entry>
   
   <entry>
-    <title>JavaScript基础——变量类型和计算</title>
+    <title>变量类型和计算</title>
     <link href="http://KinWah.top//blog/JavaScript%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E2%80%94%E2%80%94%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%AE%A1%E7%AE%97.html"/>
     <id>http://KinWah.top//blog/JavaScript基础知识——变量类型和计算.html</id>
     <published>2017-09-01T16:10:12.000Z</published>
-    <updated>2017-10-18T16:39:10.000Z</updated>
+    <updated>2017-10-18T16:52:07.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>前言：最近好好看了一遍JavaScript的基础，总结回顾了相关的知识点。通过博客文章，好好把看过的内容记录下来。</p>

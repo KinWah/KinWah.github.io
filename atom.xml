@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://KinWah.top/"/>
-  <updated>2017-10-18T16:33:57.000Z</updated>
+  <updated>2017-10-18T16:33:50.000Z</updated>
   <id>http://KinWah.top/</id>
   
   <author>
@@ -14,232 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>JavaScript基础知识——原型和原型链</title>
-    <link href="http://KinWah.top//blog/JavaScript%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E2%80%94%E2%80%94%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE.html"/>
-    <id>http://KinWah.top//blog/JavaScript基础知识——原型和原型链.html</id>
-    <published>2017-09-09T16:50:43.000Z</published>
-    <updated>2017-10-18T16:33:57.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="原型和原型链"><a href="#原型和原型链" class="headerlink" title="原型和原型链"></a><font color="#3f51b5">原型和原型链</font></h1><ul>
-<li>常见题目：<ul>
-<li>如何准确判断一个变量是数组类型</li>
-<li>写一个原型链继承的例子</li>
-<li>描述new一个对象的过程</li>
-<li>各种框架源码中如何使用原型链</li>
-</ul>
-</li>
-<li>知识点：<ul>
-<li>构造函数</li>
-<li>构造函数-扩展</li>
-<li>原型规则和示例</li>
-<li>原型链</li>
-</ul>
-</li>
-<li><p>构造函数</p>
-<pre><code>function Foo(name, age) {
-    this.name = name;
-    this.age = age;
-    this.class = &apos;class-1&apos;;
-    // return this; // 默认有这行
-    // Foo开头大写，默认认知就是构造函数
-    }
-var f = new Foo(&apos;zhangsan&apos;,20);
-// var fn1 = new Foo(&apos;list&apos;,22) //创建多个对象
-</code></pre></li>
-<li>构造函数-扩展<ul>
-<li>var = a {} 其实是 var a = new Object()的语法糖</li>
-<li>var = a [] 其实是 var a = new Array()的语法糖</li>
-<li>function Foo(){…} 其实是 var Foo = new Function(…)</li>
-<li>使用instanceof判断一个函数是否是一个变量的构造函数<ul>
-<li>判断一个变量是否为’数组’：变量 <code>instanceof Array</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>5个常见原型规则</p>
-<ol>
-<li><p>所有的引用类型（数组、对象、函数），都具有对象特性，即可自由扩展属性（除了”null”意外）</p>
-<pre><code>var obj = {}; obj.a = 100;
-var arr = []; arr.a = 100;
-function fn () {};
-fn.a = 100;
-</code></pre></li>
-<li><p>所有的引用类型（数组、对象、函数），都有一个<code>_proto_（隐式原型）</code>属性，属性值是一个普通的对象</p>
-<pre><code>console.log(obj.__proto__);
-console.log(arr.__proto__);
-consolo.log(fn.__proto__); 
-</code></pre></li>
-<li><p>所有的函数，都有一个<code>prototype（显式原型）</code>属性，属性值是一个普通的对象</p>
-<pre><code>console.log(fn.prototype);
-</code></pre></li>
-<li><p>所有的引用类型（数组、对象、函数），<code>__proto__（隐式原型）</code>属性值指向（完全等）它的构造函数的<code>prototype（显式原型）</code>属性值</p>
-<pre><code>console.log(obj.__proto__ === Object.prototype);
-</code></pre></li>
-<li><p>当试图得到一个对象的某个属性时，如果这个对象本身没有这个属性，那么会去它的<code>__proto__（隐式原型）</code>（既它的构造函数的<code>prototype（显式原型）</code>）中寻找</p>
-<pre><code>//构造函数
-funciton Foo(name,age) {
-    this.name = name;
-    }
-Foo.prototype.alertName = function () {
-    alert(this.name);
-    };
-//创建示例
-var f = new Foo(&apos;zhangsan&apos;);
-f.printName = function () {
-    console.log(this.name);
-    };
-//测试
-f.printName();
-f.alertName();
-f.toString(); //要去 f.__proto__.__proto___（下图所示）
-</code></pre><p><img src="http://ovl5r0omj.bkt.clouddn.com//17-9-13/39252999.jpg" alt=""><br><img src="http://ovl5r0omj.bkt.clouddn.com//17-9-13/87481822.jpg" alt=""></p>
-</li>
-</ol>
-</li>
-<li><p>规则的补充两点：</p>
-<pre><code>1、循环对象自身的属性——`f.hasOwnProperty()`
-2、this永远指向对象本身
-</code></pre></li>
-<li><p>原型链—instanceof</p>
-<ul>
-<li><code>f instanceof Foo</code> 的判断逻辑是：</li>
-<li><code>f</code> 的<code>__proto__</code>一层一层往上，能否对应到<code>Foo.prototype</code></li>
-<li>再试着判断<code>f instanceof Object</code></li>
-<li><p>原型链示例：</p>
-<pre><code>// 定义一个构造函数
- function Elem(id) {
-     this.elem= document.getElementById(id);
- }
- // 扩展原型
- Elem.prototype.html = function (val) {
-     var elem = this.elem;
-     if (val) {
-         elem.innerHTML = val;
-         return this; // 链式操作
-     } else {
-         return elem.innerHTML
-     }
- };
- // 扩展方法(事件绑定）
- Elem.prototype.on = function (type, fn) {
-     var elem = this.elem;
-     elem.addEventListener(type, fn);
- };
-
- var div1 = new Elem(&apos;head&apos;);
- console.log(div1.html());
-div1.html(&apos;&lt;p&gt;hello world&lt;/p&gt;&apos;);
-div1.on(&apos;click&apos;,function () {
-    alert(&apos;clicked&apos;)
-})    ;
-//以上是一个封装DOM查询的例子
-</code></pre></li>
-</ul>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;原型和原型链&quot;&gt;&lt;a href=&quot;#原型和原型链&quot; class=&quot;headerlink&quot; title=&quot;原型和原型链&quot;&gt;&lt;/a&gt;&lt;font color=&quot;#3f51b5&quot;&gt;原型和原型链&lt;/font&gt;&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;常见题目：&lt;ul&gt;
-&lt;li&gt;如何准确判
-    
-    </summary>
-    
-      <category term="总结" scheme="http://KinWah.top/categories/%E6%80%BB%E7%BB%93/"/>
-    
-    
-      <category term="JavaScript" scheme="http://KinWah.top/tags/JavaScript/"/>
-    
-      <category term="基础" scheme="http://KinWah.top/tags/%E5%9F%BA%E7%A1%80/"/>
-    
-      <category term="三座大山" scheme="http://KinWah.top/tags/%E4%B8%89%E5%BA%A7%E5%A4%A7%E5%B1%B1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript基础知识——变量类型和计算</title>
-    <link href="http://KinWah.top//blog/JavaScript%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E2%80%94%E2%80%94%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%AE%A1%E7%AE%97.html"/>
-    <id>http://KinWah.top//blog/JavaScript基础知识——变量类型和计算.html</id>
-    <published>2017-09-09T16:50:43.000Z</published>
-    <updated>2017-10-18T16:15:50.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="变量类型和计算"><a href="#变量类型和计算" class="headerlink" title="变量类型和计算"></a><font color="#3f51b5">变量类型和计算</font></h1><ul>
-<li>常见题目：<ul>
-<li>JS中使用typeof能得到哪些类型</li>
-<li>何时使用 === 何时使用 ==</li>
-<li>JS中有哪些内置函数</li>
-<li>JS变量按照<strong>存储方式</strong>区分为哪些类型，并描述其特点</li>
-<li>如何理解<code>JSON</code></li>
-</ul>
-</li>
-<li>知识点：<ul>
-<li>变量类型</li>
-<li>变量计算</li>
-</ul>
-</li>
-<li><p>变量类型：</p>
-<ul>
-<li>值类型：数值、布尔值、<code>null</code>、<code>undefined</code></li>
-<li>引用类型：对象、数组、函数</li>
-<li><p>typeof 运算符：</p>
-<pre><code>typeof undefined;    /undefined
-typeof &apos;abc&apos;;        /string
-typeof 123;            /number
-typeof true;        /boolean
-typeof [];            /object
-tyoeof {};             /object
-typeof null;         /object
-typeof console.log; /function
-</code></pre></li>
-</ul>
-</li>
-<li>变量计算——强制类型转换<ul>
-<li>字符串拼接</li>
-<li><code>==</code>运算符</li>
-<li>if语句</li>
-<li>逻辑运算</li>
-</ul>
-</li>
-<li><p>何时使用 <code>===</code>；何时使用<code>==</code></p>
-<pre><code>if (obj.a == null) {
-    //这里相当于obj.a === null || obj.a === undefined 简写形式
-    //这里jquery 码源推荐的写法
-    }
-</code></pre></li>
-<li>JS中的内置函数：<ul>
-<li><code>Object</code>、<code>Array</code>、<code>Boolean</code>、<code>Number</code>、<code>String</code>、<code>Function</code>、<code>Date</code>、<code>RegExp</code>、<code>Error</code>。</li>
-</ul>
-</li>
-<li>JS按存储方式区分变量类型：值类型、引用类型</li>
-<li><p>如何理解JSON：JSON只不过是一个JS对象而已，常用API：</p>
-<pre><code>JSON.stringify({a:10,b:20});        /对象转字符串
-JSON.parse(&apos;{&quot;a&quot;:10,&quot;b&quot;:20}&apos;);    /字符串转对象
-</code></pre></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;变量类型和计算&quot;&gt;&lt;a href=&quot;#变量类型和计算&quot; class=&quot;headerlink&quot; title=&quot;变量类型和计算&quot;&gt;&lt;/a&gt;&lt;font color=&quot;#3f51b5&quot;&gt;变量类型和计算&lt;/font&gt;&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;常见题目：&lt;ul&gt;
-&lt;li&gt;J
-    
-    </summary>
-    
-      <category term="总结" scheme="http://KinWah.top/categories/%E6%80%BB%E7%BB%93/"/>
-    
-    
-      <category term="JavaScript" scheme="http://KinWah.top/tags/JavaScript/"/>
-    
-      <category term="基础" scheme="http://KinWah.top/tags/%E5%9F%BA%E7%A1%80/"/>
-    
-      <category term="三座大山" scheme="http://KinWah.top/tags/%E4%B8%89%E5%BA%A7%E5%A4%A7%E5%B1%B1/"/>
-    
-  </entry>
   
   <entry>
     <title>JavaScript基础知识--总汇</title>
@@ -1403,6 +1177,242 @@ textarea.addEventListener(&apos;keyup&apos;,function(){
 &lt;li&gt;值类型&lt;/li&gt;
 &lt;li&gt;引用类型：对象、数组、函数&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;typeo
+    
+    </summary>
+    
+      <category term="总结" scheme="http://KinWah.top/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="JavaScript" scheme="http://KinWah.top/tags/JavaScript/"/>
+    
+      <category term="基础" scheme="http://KinWah.top/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="三座大山" scheme="http://KinWah.top/tags/%E4%B8%89%E5%BA%A7%E5%A4%A7%E5%B1%B1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript基础知识——原型和原型链</title>
+    <link href="http://KinWah.top//blog/JavaScript%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E2%80%94%E2%80%94%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE.html"/>
+    <id>http://KinWah.top//blog/JavaScript基础知识——原型和原型链.html</id>
+    <published>2017-09-01T16:50:43.000Z</published>
+    <updated>2017-10-18T16:39:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>前言：最近好好看了一遍JavaScript的基础，总结回顾了相关的知识点。通过博客文章，好好把看过的内容记录下来。</p>
+<p>——原型和原型链<br><a id="more"></a></p>
+</blockquote>
+<hr>
+<h1 id="原型和原型链"><a href="#原型和原型链" class="headerlink" title="原型和原型链"></a><font color="#3f51b5">原型和原型链</font></h1><ul>
+<li>常见题目：<ul>
+<li>如何准确判断一个变量是数组类型</li>
+<li>写一个原型链继承的例子</li>
+<li>描述new一个对象的过程</li>
+<li>各种框架源码中如何使用原型链</li>
+</ul>
+</li>
+<li>知识点：<ul>
+<li>构造函数</li>
+<li>构造函数-扩展</li>
+<li>原型规则和示例</li>
+<li>原型链</li>
+</ul>
+</li>
+<li><p>构造函数</p>
+<pre><code>function Foo(name, age) {
+    this.name = name;
+    this.age = age;
+    this.class = &apos;class-1&apos;;
+    // return this; // 默认有这行
+    // Foo开头大写，默认认知就是构造函数
+    }
+var f = new Foo(&apos;zhangsan&apos;,20);
+// var fn1 = new Foo(&apos;list&apos;,22) //创建多个对象
+</code></pre></li>
+<li>构造函数-扩展<ul>
+<li>var = a {} 其实是 var a = new Object()的语法糖</li>
+<li>var = a [] 其实是 var a = new Array()的语法糖</li>
+<li>function Foo(){…} 其实是 var Foo = new Function(…)</li>
+<li>使用instanceof判断一个函数是否是一个变量的构造函数<ul>
+<li>判断一个变量是否为’数组’：变量 <code>instanceof Array</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>5个常见原型规则</p>
+<ol>
+<li><p>所有的引用类型（数组、对象、函数），都具有对象特性，即可自由扩展属性（除了”null”意外）</p>
+<pre><code>var obj = {}; obj.a = 100;
+var arr = []; arr.a = 100;
+function fn () {};
+fn.a = 100;
+</code></pre></li>
+<li><p>所有的引用类型（数组、对象、函数），都有一个<code>_proto_（隐式原型）</code>属性，属性值是一个普通的对象</p>
+<pre><code>console.log(obj.__proto__);
+console.log(arr.__proto__);
+consolo.log(fn.__proto__); 
+</code></pre></li>
+<li><p>所有的函数，都有一个<code>prototype（显式原型）</code>属性，属性值是一个普通的对象</p>
+<pre><code>console.log(fn.prototype);
+</code></pre></li>
+<li><p>所有的引用类型（数组、对象、函数），<code>__proto__（隐式原型）</code>属性值指向（完全等）它的构造函数的<code>prototype（显式原型）</code>属性值</p>
+<pre><code>console.log(obj.__proto__ === Object.prototype);
+</code></pre></li>
+<li><p>当试图得到一个对象的某个属性时，如果这个对象本身没有这个属性，那么会去它的<code>__proto__（隐式原型）</code>（既它的构造函数的<code>prototype（显式原型）</code>）中寻找</p>
+<pre><code>//构造函数
+funciton Foo(name,age) {
+    this.name = name;
+    }
+Foo.prototype.alertName = function () {
+    alert(this.name);
+    };
+//创建示例
+var f = new Foo(&apos;zhangsan&apos;);
+f.printName = function () {
+    console.log(this.name);
+    };
+//测试
+f.printName();
+f.alertName();
+f.toString(); //要去 f.__proto__.__proto___（下图所示）
+</code></pre><p><img src="http://ovl5r0omj.bkt.clouddn.com//17-9-13/39252999.jpg" alt=""><br><img src="http://ovl5r0omj.bkt.clouddn.com//17-9-13/87481822.jpg" alt=""></p>
+</li>
+</ol>
+</li>
+<li><p>规则的补充两点：</p>
+<pre><code>1、循环对象自身的属性——`f.hasOwnProperty()`
+2、this永远指向对象本身
+</code></pre></li>
+<li><p>原型链—instanceof</p>
+<ul>
+<li><code>f instanceof Foo</code> 的判断逻辑是：</li>
+<li><code>f</code> 的<code>__proto__</code>一层一层往上，能否对应到<code>Foo.prototype</code></li>
+<li>再试着判断<code>f instanceof Object</code></li>
+<li><p>原型链示例：</p>
+<pre><code>// 定义一个构造函数
+ function Elem(id) {
+     this.elem= document.getElementById(id);
+ }
+ // 扩展原型
+ Elem.prototype.html = function (val) {
+     var elem = this.elem;
+     if (val) {
+         elem.innerHTML = val;
+         return this; // 链式操作
+     } else {
+         return elem.innerHTML
+     }
+ };
+ // 扩展方法(事件绑定）
+ Elem.prototype.on = function (type, fn) {
+     var elem = this.elem;
+     elem.addEventListener(type, fn);
+ };
+
+ var div1 = new Elem(&apos;head&apos;);
+ console.log(div1.html());
+div1.html(&apos;&lt;p&gt;hello world&lt;/p&gt;&apos;);
+div1.on(&apos;click&apos;,function () {
+    alert(&apos;clicked&apos;)
+})    ;
+//以上是一个封装DOM查询的例子
+</code></pre></li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;前言：最近好好看了一遍JavaScript的基础，总结回顾了相关的知识点。通过博客文章，好好把看过的内容记录下来。&lt;/p&gt;
+&lt;p&gt;——原型和原型链&lt;br&gt;
+    
+    </summary>
+    
+      <category term="总结" scheme="http://KinWah.top/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="JavaScript" scheme="http://KinWah.top/tags/JavaScript/"/>
+    
+      <category term="基础" scheme="http://KinWah.top/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="三座大山" scheme="http://KinWah.top/tags/%E4%B8%89%E5%BA%A7%E5%A4%A7%E5%B1%B1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript基础——变量类型和计算</title>
+    <link href="http://KinWah.top//blog/JavaScript%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E2%80%94%E2%80%94%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%AE%A1%E7%AE%97.html"/>
+    <id>http://KinWah.top//blog/JavaScript基础知识——变量类型和计算.html</id>
+    <published>2017-09-01T16:10:12.000Z</published>
+    <updated>2017-10-18T16:39:10.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>前言：最近好好看了一遍JavaScript的基础，总结回顾了相关的知识点。通过博客文章，好好把看过的内容记录下来。</p>
+<p>——变量类型和计算<br><a id="more"></a></p>
+</blockquote>
+<hr>
+<h1 id="变量类型和计算"><a href="#变量类型和计算" class="headerlink" title="变量类型和计算"></a><font color="#3f51b5">变量类型和计算</font></h1><ul>
+<li>常见题目：<ul>
+<li>JS中使用typeof能得到哪些类型</li>
+<li>何时使用 === 何时使用 ==</li>
+<li>JS中有哪些内置函数</li>
+<li>JS变量按照<strong>存储方式</strong>区分为哪些类型，并描述其特点</li>
+<li>如何理解<code>JSON</code></li>
+</ul>
+</li>
+<li>知识点：<ul>
+<li>变量类型</li>
+<li>变量计算</li>
+</ul>
+</li>
+<li><p>变量类型：</p>
+<ul>
+<li>值类型：数值、布尔值、<code>null</code>、<code>undefined</code></li>
+<li>引用类型：对象、数组、函数</li>
+<li><p>typeof 运算符：</p>
+<pre><code>typeof undefined;    /undefined
+typeof &apos;abc&apos;;        /string
+typeof 123;            /number
+typeof true;        /boolean
+typeof [];            /object
+tyoeof {};             /object
+typeof null;         /object
+typeof console.log; /function
+</code></pre></li>
+</ul>
+</li>
+<li>变量计算——强制类型转换<ul>
+<li>字符串拼接</li>
+<li><code>==</code>运算符</li>
+<li>if语句</li>
+<li>逻辑运算</li>
+</ul>
+</li>
+<li><p>何时使用 <code>===</code>；何时使用<code>==</code></p>
+<pre><code>if (obj.a == null) {
+    //这里相当于obj.a === null || obj.a === undefined 简写形式
+    //这里jquery 码源推荐的写法
+    }
+</code></pre></li>
+<li>JS中的内置函数：<ul>
+<li><code>Object</code>、<code>Array</code>、<code>Boolean</code>、<code>Number</code>、<code>String</code>、<code>Function</code>、<code>Date</code>、<code>RegExp</code>、<code>Error</code>。</li>
+</ul>
+</li>
+<li>JS按存储方式区分变量类型：值类型、引用类型</li>
+<li><p>如何理解JSON：JSON只不过是一个JS对象而已，常用API：</p>
+<pre><code>JSON.stringify({a:10,b:20});        /对象转字符串
+JSON.parse(&apos;{&quot;a&quot;:10,&quot;b&quot;:20}&apos;);    /字符串转对象
+</code></pre></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;前言：最近好好看了一遍JavaScript的基础，总结回顾了相关的知识点。通过博客文章，好好把看过的内容记录下来。&lt;/p&gt;
+&lt;p&gt;——变量类型和计算&lt;br&gt;
     
     </summary>
     

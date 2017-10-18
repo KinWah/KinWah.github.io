@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://KinWah.top/"/>
-  <updated>2017-10-18T15:48:28.000Z</updated>
+  <updated>2017-10-18T15:55:19.000Z</updated>
   <id>http://KinWah.top/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://KinWah.top//blog/JS%E9%9D%A2%E8%AF%95%E9%A2%98%E8%AF%A6%E8%A7%A3.html"/>
     <id>http://KinWah.top//blog/JS面试题详解.html</id>
     <published>2017-09-12T16:31:17.000Z</published>
-    <updated>2017-10-18T15:48:28.000Z</updated>
+    <updated>2017-10-18T15:55:19.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="JS面试题详解"><a href="#JS面试题详解" class="headerlink" title="JS面试题详解"></a>JS面试题详解</h2><h3 id="变量类型和计算"><a href="#变量类型和计算" class="headerlink" title="变量类型和计算"></a>变量类型和计算</h3><ul>
 <li>值类型</li>
@@ -695,6 +695,7 @@ bindEvent(a, &apos;click&apos;, function(e){
         bindEvent(body, &apos;click&apos;, function(e) {
             alert(&apos;取消&apos;)
         })
+
 - 事件冒泡流程：
     - DOM树形结构
     - 事件冒泡
@@ -726,10 +727,10 @@ xhr.open(&quot;GET&quot;, &quot;/api&quot;, true);
 xhr.onreadystatechange = function() {
 // 这里的函数异步执行，参考之前JS基础中的异步模块
 if (xhr.readyState == 4) {
-    if (xhr.status == 200) {
-        alert(xhr.responseText)
+if (xhr.status == 200) {
+    alert(xhr.responseText)
+        }
     }
-}
 }
 xhr.send(null);
 </code></pre><p>  <img src="http://ovl5r0omj.bkt.clouddn.com//17-10-12/60055401.jpg" alt=""><br>  <img src="http://ovl5r0omj.bkt.clouddn.com//17-10-12/70043625.jpg" alt=""></p>
@@ -817,7 +818,8 @@ xhr.send(null);
 <pre><code>var dt = new Date()
 console.log(aGetFormatDate(dt))
 </code></pre></li>
-<li>必须层级关系,必须全局变量,容易造成全局污染</li>
+<li><p>必须层级关系,必须全局变量,容易造成全局污染</p>
+</li>
 <li>知道<code>a.js</code>依赖<code>a-util.js</code>,但是可能不知道<code>a-util.js</code>依赖<code>util.js</code></li>
 </ul>
 </li>
@@ -893,6 +895,7 @@ console.log(aGetFormatDate(dt))
             var date = new Date()
             a.printDate(date)
         })
+
 - 使用:`&lt;script src=&apos;/require.min.js&apos; data-main=&apos;./main.js&apos;&gt;&lt;/script&gt;`        
 </code></pre><ul>
 <li>CommonJS<ul>
@@ -1174,6 +1177,87 @@ textarea.addEventListener(&apos;keyup&apos;,function(){
     
     </summary>
     
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript基础知识——变量类型和计算</title>
+    <link href="http://KinWah.top//blog/JavaScript%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E2%80%94%E2%80%94%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%AE%A1%E7%AE%97.html"/>
+    <id>http://KinWah.top//blog/JavaScript基础知识——变量类型和计算.html</id>
+    <published>2017-09-09T16:50:43.000Z</published>
+    <updated>2017-10-18T16:15:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="变量类型和计算"><a href="#变量类型和计算" class="headerlink" title="变量类型和计算"></a><font color="#3f51b5">变量类型和计算</font></h1><ul>
+<li>常见题目：<ul>
+<li>JS中使用typeof能得到哪些类型</li>
+<li>何时使用 === 何时使用 ==</li>
+<li>JS中有哪些内置函数</li>
+<li>JS变量按照<strong>存储方式</strong>区分为哪些类型，并描述其特点</li>
+<li>如何理解<code>JSON</code></li>
+</ul>
+</li>
+<li>知识点：<ul>
+<li>变量类型</li>
+<li>变量计算</li>
+</ul>
+</li>
+<li><p>变量类型：</p>
+<ul>
+<li>值类型：数值、布尔值、<code>null</code>、<code>undefined</code></li>
+<li>引用类型：对象、数组、函数</li>
+<li><p>typeof 运算符：</p>
+<pre><code>typeof undefined;    /undefined
+typeof &apos;abc&apos;;        /string
+typeof 123;            /number
+typeof true;        /boolean
+typeof [];            /object
+tyoeof {};             /object
+typeof null;         /object
+typeof console.log; /function
+</code></pre></li>
+</ul>
+</li>
+<li>变量计算——强制类型转换<ul>
+<li>字符串拼接</li>
+<li><code>==</code>运算符</li>
+<li>if语句</li>
+<li>逻辑运算</li>
+</ul>
+</li>
+<li><p>何时使用 <code>===</code>；何时使用<code>==</code></p>
+<pre><code>if (obj.a == null) {
+    //这里相当于obj.a === null || obj.a === undefined 简写形式
+    //这里jquery 码源推荐的写法
+    }
+</code></pre></li>
+<li>JS中的内置函数：<ul>
+<li><code>Object</code>、<code>Array</code>、<code>Boolean</code>、<code>Number</code>、<code>String</code>、<code>Function</code>、<code>Date</code>、<code>RegExp</code>、<code>Error</code>。</li>
+</ul>
+</li>
+<li>JS按存储方式区分变量类型：值类型、引用类型</li>
+<li><p>如何理解JSON：JSON只不过是一个JS对象而已，常用API：</p>
+<pre><code>JSON.stringify({a:10,b:20});        /对象转字符串
+JSON.parse(&apos;{&quot;a&quot;:10,&quot;b&quot;:20}&apos;);    /字符串转对象
+</code></pre></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;变量类型和计算&quot;&gt;&lt;a href=&quot;#变量类型和计算&quot; class=&quot;headerlink&quot; title=&quot;变量类型和计算&quot;&gt;&lt;/a&gt;&lt;font color=&quot;#3f51b5&quot;&gt;变量类型和计算&lt;/font&gt;&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;常见题目：&lt;ul&gt;
+&lt;li&gt;J
+    
+    </summary>
+    
+      <category term="总结" scheme="http://KinWah.top/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="JavaScript" scheme="http://KinWah.top/tags/JavaScript/"/>
+    
+      <category term="基础" scheme="http://KinWah.top/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="三座大山" scheme="http://KinWah.top/tags/%E4%B8%89%E5%BA%A7%E5%A4%A7%E5%B1%B1/"/>
     
   </entry>
   

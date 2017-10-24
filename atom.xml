@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://KinWah.top/"/>
-  <updated>2017-10-18T17:06:34.000Z</updated>
+  <updated>2017-10-24T09:37:13.000Z</updated>
   <id>http://KinWah.top/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://KinWah.top//blog/%E6%A8%A1%E5%9D%97%E5%8C%96.html"/>
     <id>http://KinWah.top//blog/模块化.html</id>
     <published>2017-09-03T15:42:12.000Z</published>
-    <updated>2017-10-18T17:06:34.000Z</updated>
+    <updated>2017-10-24T09:37:13.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>前言：最近好好看了一遍JavaScript的基础，总结回顾了相关的知识点。通过博客文章，好好把看过的内容记录下来。</p>
@@ -132,7 +132,9 @@ console.log(aGetFormatDate(dt))
             a.printDate(date)
         })
 
-- 使用:`&lt;script src=&apos;/require.min.js&apos; data-main=&apos;./main.js&apos;&gt;&lt;/script&gt;`        
+
+
+- 使用:`&lt;script src=&apos;/require.min.js&apos; data-main=&apos;./main.js&apos;&gt;&lt;/script&gt;`
 </code></pre><ul>
 <li>CommonJS<ul>
 <li><code>node.js</code>模块化规范,现在被大量用于前端</li>
@@ -1462,7 +1464,7 @@ JSON.parse(&apos;{&quot;a&quot;:10,&quot;b&quot;:20}&apos;);    /字符串转对
     <link href="http://KinWah.top//blog/JS%E9%9D%A2%E8%AF%95%E9%A2%98%E8%AF%A6%E8%A7%A3.html"/>
     <id>http://KinWah.top//blog/JS面试题详解.html</id>
     <published>2017-09-01T14:15:34.000Z</published>
-    <updated>2017-10-18T17:21:12.000Z</updated>
+    <updated>2017-10-18T17:25:20.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>前言：最近好好看了一遍JavaScript的基础，总结回顾了相关的知识点。通过博客文章，好好把看过的内容记录下来。</p>

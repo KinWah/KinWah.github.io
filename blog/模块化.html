@@ -112,7 +112,7 @@
 <meta property="og:site_name" content="KinWah&#39;s Blog">
 <meta property="og:description" content="前言：最近好好看了一遍JavaScript的基础，总结回顾了相关的知识点。通过博客文章，好好把看过的内容记录下来。 ——模块化">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-24T09:37:13.000Z">
+<meta property="og:updated_time" content="2017-10-24T12:41:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="模块化">
 <meta name="twitter:description" content="前言：最近好好看了一遍JavaScript的基础，总结回顾了相关的知识点。通过博客文章，好好把看过的内容记录下来。 ——模块化">
@@ -446,55 +446,55 @@ console.log(aGetFormatDate(dt))
 <li>函数没必要做成全局变量,不会带来污染和覆盖</li>
 </ul>
 </li>
-<li>AMD:异步模块定义<ul>
+<li><p>AMD:异步模块定义</p>
+<ul>
 <li>require.js : <a href="http://requirejs.org" target="_blank" rel="external">官网地址</a></li>
 <li>全局<code>define</code>函数</li>
 <li>全局<code>require</code>函数</li>
 <li>依赖JS会自动,异步加载</li>
-<li>结合<code>util.js</code>,<code>a-util.js</code>,<code>a.js</code></li>
+<li><p>使用:<code>&lt;script src=&#39;/require.min.js&#39; data-main=&#39;./main.js&#39;&gt;&lt;/script&gt;</code></p>
+</li>
+<li><p>结合<code>util.js</code>,<code>a-util.js</code>,<code>a.js</code></p>
+</li>
 </ul>
 </li>
 </ul>
-<pre><code>        // util.js
-        define(function(){
-            return{
-                getFormatDate: function(date,type){
-                    if(type === 1){
-                        return &apos;2017-11-11&apos;
-                    }
-                    if(type === 2){
-                        return &apos;2017年11月11日&apos;
-                    }
-                }
+<pre><code>// util.js
+define(function(){
+    return{
+        getFormatDate: function(date,type){
+            if(type === 1){
+                return &apos;2017-11-11&apos;
             }
-        })
-
-        // a-util.js
-        define([&apos;./util.js&apos;],function(util){
-            return{
-                aGetFormatDate: function(date){
-                    return util.getFormatDate(date, 2)
-                }
+            if(type === 2){
+                return &apos;2017年11月11日&apos;
             }
-        })
+        }
+    }
+})
 
-        // a.js
-        define([&apos;./a-util.js&apos;],function(aUtil){
-            return{
-                printDate: function(date){
-                    console.log(aUtil.aGetFormatDate(date))
-                }
-            }
-        })
-        // main.js
-        require([&apos;./a.js&apos;],function(a){
-            var date = new Date()
-            a.printDate(date)
-        })
+// a-util.js
+define([&apos;./util.js&apos;],function(util){
+    return{
+        aGetFormatDate: function(date){
+            return util.getFormatDate(date, 2)
+        }
+    }
+})
 
-
-
-- 使用:`&lt;script src=&apos;/require.min.js&apos; data-main=&apos;./main.js&apos;&gt;&lt;/script&gt;`
+// a.js
+define([&apos;./a-util.js&apos;],function(aUtil){
+    return{
+        printDate: function(date){
+            console.log(aUtil.aGetFormatDate(date))
+        }
+    }
+})
+// main.js
+require([&apos;./a.js&apos;],function(a){
+    var date = new Date()
+    a.printDate(date)
+})
 </code></pre><ul>
 <li>CommonJS<ul>
 <li><code>node.js</code>模块化规范,现在被大量用于前端</li>

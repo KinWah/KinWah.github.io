@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://KinWah.top/"/>
-  <updated>2017-10-24T12:41:53.000Z</updated>
+  <updated>2017-10-24T16:17:26.000Z</updated>
   <id>http://KinWah.top/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://KinWah.top//blog/%E6%A8%A1%E5%9D%97%E5%8C%96.html"/>
     <id>http://KinWah.top//blog/模块化.html</id>
     <published>2017-09-03T15:42:12.000Z</published>
-    <updated>2017-10-24T12:41:53.000Z</updated>
+    <updated>2017-10-24T16:17:26.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>前言：最近好好看了一遍JavaScript的基础，总结回顾了相关的知识点。通过博客文章，好好把看过的内容记录下来。</p>
@@ -92,13 +92,9 @@ console.log(aGetFormatDate(dt))
 <li>全局<code>define</code>函数</li>
 <li>全局<code>require</code>函数</li>
 <li>依赖JS会自动,异步加载</li>
-<li><p>使用:<code>&lt;script src=&#39;/require.min.js&#39; data-main=&#39;./main.js&#39;&gt;&lt;/script&gt;</code></p>
-</li>
-<li><p>结合<code>util.js</code>,<code>a-util.js</code>,<code>a.js</code></p>
-</li>
-</ul>
-</li>
-</ul>
+<li>使用:<code>&lt;script src=&#39;/require.min.js&#39; data-main=&#39;./main.js&#39;&gt;&lt;/script&gt;</code></li>
+<li>结合<code>util.js</code>,<code>a-util.js</code>,<code>a.js</code></li>
+<li><p>例子：</p>
 <pre><code>// util.js
 define(function(){
     return{
@@ -135,7 +131,11 @@ require([&apos;./a.js&apos;],function(a){
     var date = new Date()
     a.printDate(date)
 })
-</code></pre><ul>
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<ul>
 <li>CommonJS<ul>
 <li><code>node.js</code>模块化规范,现在被大量用于前端</li>
 <li>前端开发依赖的插件和库,都可以从<code>npm</code>中获取</li>

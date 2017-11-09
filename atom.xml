@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://KinWah.top/"/>
-  <updated>2017-10-24T16:17:26.000Z</updated>
+  <updated>2017-11-09T18:34:56.000Z</updated>
   <id>http://KinWah.top/</id>
   
   <author>
@@ -16,11 +16,204 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="http://KinWah.top//blog/Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8.html"/>
+    <id>http://KinWah.top//blog/Vue基础入门.html</id>
+    <published>2017-11-09T17:10:07.000Z</published>
+    <updated>2017-11-09T18:34:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Vue基础入门"><a href="#Vue基础入门" class="headerlink" title="Vue基础入门"></a>Vue基础入门</h2><h3 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h3><pre><code>var app = new Vue({
+    // 绑定id
+    el: &apos;#app&apos;,
+
+    // 数据和元素属性:v-for v-bind
+    data: {
+        name: &apos;&apos;,
+        age: &apos;&apos;
+    },
+
+    // 事件绑定:v-on
+    methods: {
+
+    },
+
+    // 计算属性:
+    computed:{
+        sum:function(){
+            return this.math + this.xxx + this.eng
+        },
+        average:function(){
+            return this.sum / 3
+        }
+    },
+    props:[]
+    ,
+})
+</code></pre><ul>
+<li>v-for<ul>
+<li>用于迭代的指令（动态监控数据变化）</li>
+</ul>
+</li>
+<li>v-bind<ul>
+<li>用于绑定数据和元素属性的指令（双向绑定）</li>
+<li>还可以绑定类</li>
+<li>通俗写法<code>v-bind:href=&quot;xx&quot;</code>、<code>v-bind:class=&quot;xx&quot;</code></li>
+<li>快捷写法<code>:class=&quot;xx&quot;</code>、<code>:img=&quot;xx&quot;</code></li>
+</ul>
+</li>
+<li>v-on<ul>
+<li>用于绑定事件</li>
+<li>通俗写法：<code>:</code><ul>
+<li><code>v-on:click=&quot;onClick&quot;</code></li>
+<li><code>v-on=&quot;{mouseenter: onEnter, mouseleave: onOut}&quot;</code></li>
+<li><code>v-on:submit.prevent=&quot;onSubmit&quot;</code> 阻止整页刷新</li>
+<li><code>v-on:submit.stop=&quot;onSubmit&quot;</code> 阻止冒泡事件</li>
+<li><code>v-on:keyup.enter=&quot;onKEnter&quot;</code> 监测回车键</li>
+</ul>
+</li>
+<li>快捷写法：<code>@</code><ul>
+<li><code>@click=&quot;onClick&quot;</code></li>
+<li><code>@&quot;{mouseenter: onEnter, mouseleave: onOut}&quot;</code></li>
+<li><code>@submit.prevent=&quot;onSubmit&quot;</code> 阻止整页刷新</li>
+<li><code>@submit.stop=&quot;onSubmit&quot;</code> 阻止冒泡事件</li>
+<li><code>@keyup.enter=&quot;onKEnter&quot;</code> 监测回车键</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>v-model（非常常用）<ul>
+<li>好用、安全、强大</li>
+<li><code>v-model.lazy</code> 惰性更新（输入完了，才绑定）</li>
+<li><code>v-model.trim</code> 去掉前后空格（密码输入时慎用）</li>
+<li><code>v-model.number</code> 字符串自动转数字类型、</li>
+<li>不同元素和类型上使用：<ul>
+<li><code>&lt;input&gt;</code>：<code>type=text</code>、<code>type=radio</code>（单选）、<code>type=checkbox</code>（复选）</li>
+<li><code>&lt;textarea&gt;</code>：默认内容</li>
+<li><code>&lt;select&gt;</code>：</li>
+</ul>
+</li>
+<li>控制流指令<ul>
+<li><code>v-if= &quot;role == &#39;admin&#39; &quot;</code> // 管理员你好</li>
+<li><code>v-else-if = &quot;role == &#39;hr&#39;</code> // HR你好</li>
+<li><code>v-else</code> // 你没有权限访问</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="计算属性"><a href="#计算属性" class="headerlink" title="计算属性"></a>计算属性</h3><ul>
+<li><code>computed:{}</code>：用于通过其他数据，算出新数据，可以把结果进行缓存，其他数据没变的情况下，调用缓存的数据，提高性能</li>
+</ul>
+<h3 id="组件（可维护性，可重用性）"><a href="#组件（可维护性，可重用性）" class="headerlink" title="组件（可维护性，可重用性）"></a>组件（可维护性，可重用性）</h3><ul>
+<li><p>全局及局部组件</p>
+<ul>
+<li><p><code>Vue.component(&#39;alert&#39;,{...})</code></p>
+<pre><code>//JS内部
+Vue.component(&apos;alert&apos;,{
+    template: &apos;&lt;button @click=&quot;onClick&quot;&gt;弹窗&lt;/button&gt;&apos;，
+    methods:{
+        onClick:function(){
+            alert(&apos;OJBK!&apos;);
+        }
+    }
+}); 
+// 全局
+
+new Vue({
+    el:&apos;#app&apos;,
+    components:{
+        &apos;alert&apos;:{
+            template: &apos;&lt;button @click=&quot;onClick&quot;&gt;弹窗&lt;/button&gt;&apos;,
+            methods:{
+                onClick:function(){
+                                alert(&apos;OJBK!&apos;);
+                            }
+                }
+            }
+})
+// 局部
+
+//HTML内部
+&lt;div id=&quot;app&quot;&gt;
+    &lt;alert&gt;&lt;/alert&gt; // 直接调用上面功能
+&lt;/div&gt;
+</code></pre></li>
+</ul>
+</li>
+<li><p>配置组件</p>
+<ul>
+<li><p>点赞组件例子：</p>
+<p>  <img src="http://ovl5r0omj.bkt.clouddn.com//17-11-10/29438409.jpg" alt=""></p>
+</li>
+</ul>
+</li>
+<li>父子通信<ul>
+<li><code>props:[&#39;&#39;,&#39;&#39;]</code></li>
+<li>外部和内部通信：父-&gt;子</li>
+</ul>
+</li>
+<li>子父通信<ul>
+<li>子组件发出触发的事件，父组件监听子组件的触发事件，子父组件通过事件通信。</li>
+</ul>
+</li>
+<li>任意及平行组件间通信<ul>
+<li><code>var Event = new Vue();</code>中心调度器，来调度每个组件间的通信</li>
+<li><code>mounted:function(){}</code>生命周期 节点</li>
+</ul>
+</li>
+</ul>
+<h3 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h3><ul>
+<li><p>过滤器：<code>Vue.filter</code></p>
+<pre><code>// {{price | currency}}
+Vue.filter(&apos;currency&apos;,function(val,unit){
+    val = val || 0;
+    unit = unit || &apos;元&apos;；
+    return val + &apos;元&apos;;
+})
+
+new Vue({
+    el:&apos;#app&apos;,
+    data:{
+        price:10
+    }
+})
+</code></pre></li>
+</ul>
+<h3 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a>自定义指令</h3><ul>
+<li>基本配置<ul>
+<li>Vue.directive(‘pin’,function(el,binding){})</li>
+</ul>
+</li>
+<li>配置传参及修饰符</li>
+</ul>
+<h3 id="混合-mixins"><a href="#混合-mixins" class="headerlink" title="混合 mixins"></a>混合 mixins</h3><ul>
+<li>重复功能和重复数据的储存器</li>
+<li><code>var base = {};</code>：重复的写入<code>base</code>中</li>
+<li><code>mixins:[base]</code>：每个组件，直接调用base就可以调用重复的功能。</li>
+</ul>
+<h3 id="插槽-slots"><a href="#插槽-slots" class="headerlink" title="插槽 slots"></a>插槽 slots</h3><ul>
+<li>常用，灵活。</li>
+</ul>
+<h3 id="vue-router-路由"><a href="#vue-router-路由" class="headerlink" title="vue-router 路由"></a>vue-router 路由</h3><ul>
+<li>主要作用：指导网页层级以及定位资源（可快速开发单页应用）</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Vue基础入门&quot;&gt;&lt;a href=&quot;#Vue基础入门&quot; class=&quot;headerlink&quot; title=&quot;Vue基础入门&quot;&gt;&lt;/a&gt;Vue基础入门&lt;/h2&gt;&lt;h3 id=&quot;指令&quot;&gt;&lt;a href=&quot;#指令&quot; class=&quot;headerlink&quot; title=&quot;指
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>模块化</title>
     <link href="http://KinWah.top//blog/%E6%A8%A1%E5%9D%97%E5%8C%96.html"/>
     <id>http://KinWah.top//blog/模块化.html</id>
     <published>2017-09-03T15:42:12.000Z</published>
-    <updated>2017-10-24T16:17:26.000Z</updated>
+    <updated>2017-11-09T07:30:09.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>前言：最近好好看了一遍JavaScript的基础，总结回顾了相关的知识点。通过博客文章，好好把看过的内容记录下来。</p>
@@ -167,7 +360,7 @@ module.exports = {
 <li><p>AMD和CommonJS的使用场景</p>
 <ul>
 <li>需要异步加载JS,使用AMD</li>
-<li>使用了npm之后,建议使用CommonJ</li>
+<li>使用了npm之后,建议使用CommonJS</li>
 </ul>
 </li>
 <li>上线回滚<ul>

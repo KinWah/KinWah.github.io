@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://KinWah.top/"/>
-  <updated>2017-11-09T18:34:56.000Z</updated>
+  <updated>2017-11-19T17:27:50.000Z</updated>
   <id>http://KinWah.top/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>Vue基础入门</title>
     <link href="http://KinWah.top//blog/Vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8.html"/>
     <id>http://KinWah.top//blog/Vue基础入门.html</id>
-    <published>2017-11-09T17:10:07.000Z</published>
-    <updated>2017-11-09T18:34:56.000Z</updated>
+    <published>2017-11-06T14:15:34.000Z</published>
+    <updated>2017-11-19T17:27:50.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Vue基础入门"><a href="#Vue基础入门" class="headerlink" title="Vue基础入门"></a>Vue基础入门</h2><h3 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h3><pre><code>var app = new Vue({
     // 绑定id
@@ -154,6 +154,7 @@ new Vue({
 </li>
 <li>子父通信<ul>
 <li>子组件发出触发的事件，父组件监听子组件的触发事件，子父组件通过事件通信。</li>
+<li>子用emit，父用on接受</li>
 </ul>
 </li>
 <li>任意及平行组件间通信<ul>
@@ -205,6 +206,14 @@ new Vue({
     
     </summary>
     
+      <category term="基础" scheme="http://KinWah.top/categories/%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="JavaScript" scheme="http://KinWah.top/tags/JavaScript/"/>
+    
+      <category term="基础" scheme="http://KinWah.top/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="框架学习" scheme="http://KinWah.top/tags/%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
